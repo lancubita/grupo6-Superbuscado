@@ -1,11 +1,16 @@
 
 body {
   font-family: 'Lato', sans-serif;
+  background-color: #F2F2F2;
 }
 
 /* ---------------------------------------------------
     Navbar
 ----------------------------------------------------- */
+
+.navbar-principal {
+  z-index: 100;
+}
 
 .first-navbar {
   background-color: #61BC31;
@@ -113,6 +118,11 @@ p.user-account {
     Nav sections
 ----------------------------------------------------- */
 
+.second-navbar {
+  background-color: #fff;
+  border-bottom: 1px solid #E6E6E6;
+}
+
 .icon-star {
   padding-right: 10px;
 }
@@ -138,9 +148,13 @@ p.products-lists {
     Product catalog
 ----------------------------------------------------- */
 
-section.product-catalog {
-  border-top: 1px solid #E6E6E6;
-  background-color: #F2F2F2;
+.product-catalog {
+  padding-top: 8em;
+}
+
+img.producto {
+  width: 100%;
+  padding-top: 5%;
 }
 
 @media (max-width: 576px) {
