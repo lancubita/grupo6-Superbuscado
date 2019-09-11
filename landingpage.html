@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Configuracion -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <!-- Title -->
+  <title>Superbuscado</title>
+  <meta name="description" content="Compará precios, ofertas y promociones, comprá y ahorrá">
+
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i&display=swap" rel="stylesheet">
+
+  <!-- icons -->
+  <link rel="stylesheet" href="assets/icons/icons.css">
+
+  <!-- favicon -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.9/css/all.css">
+  <link rel="shortcut icon" href="iso-superbuscado.ico" />
+
+  <!-- Css -->
+  <link rel="stylesheet" href="css/contact_style.css">
+  <link rel="stylesheet" href="css/login_style.css">
+  <link rel="stylesheet" href="css/register_style.css">
+  <link rel="stylesheet" href="css/landingpage_style.css">
+
+</head>
+
+
+<body>
+
+  <!-- contenedor del header y section 1 al 100% de la pantalla-->
+  <header class="encabezado">
+    <div class="container">
+      <div class="altura-navbar">
+      <div class="row">
+
+      <!-- logo de superbuscado -->
+      <div class="col-4 col-sm-4 col-md-3 col-lg-2 p-0 mt-2">
+        <!-- <a href="#"><img class="mt-2 logo-navbar" src="assets/img/logo-superbuscado-white.png" alt=""></a> -->
+        <a href="#"> <span class="icon-superbuscado-logo"></span></a>
+      </div>
+
+        <!-- navbar -->
+        <nav class="col navbar d-flex justify-content-end">
+          <ul>
+            <!-- BOTON DE LOGIN -->
+            <li>
+            <button type="button" class="btn btn-success mb-2" data-toggle="modal" data-target="#login" data-whatever="@login">Login</button>
+              <div class="modal fade" id="login" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+              <div class="modal-dialog" role="document">
+                <!-- Contenedor -->
+                <div class="modal-content">
+                  <!-- Header -->
+                  <div class="modal-header">
+                    <h6 class="modal-title" id="exampleModalLabel">Bienvenido nuevamente!</h6>
+                    <!-- Boton de cierre de pagina -->
+                    <button type="button" class="btn btn-success btn-sm" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <!-- Body -->
+                  <div class="modal-body">
+                    <!-- Formulario -->
+                    <form>
+                      <div class="form-group">
+                        <input type="text" class="form-control" id="user" placeholder="Usuario">
+                      </div>
+                      <div class="form-group">
+                        <input type="password" class="form-control" id="password" placeholder="Contraseña">
+                      </div>
+                    </form>
+                  </div>
+                  <!-- Footer -->
+                  <div class="modal-footer d-flex justify-content-center" id="cierre">
+                    <button type="button" class="btn btn-outline-success btn-md" id="botonR">Ingresar</button>
+                  </div>
+                </div>
+               </div>
+              </div>
+            </li>
+            <!-- TERMINA BOTON DE LOGIN -->
+
+
+
+            <!-- BOTON DE REGISTRATE -->
+            <li>
+            <section>
+              <button type="button" class="btn btn-success" data-toggle="modal" data-target="#registrate" data-whatever="@registrate">Registrate</button>
+              <div class="modal fade" id="registrate" tabindex="-1" role="dialog" aria-    labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <!-- Imagen Titulo -->
+
+                      <!-- Titulo -->
+                      <h6 class="modal-title" id="exampleModalLabel">Este es tu primer paso para comenzar a ahorrar!</h6>
+                      <!-- Boton de cierre x -->
+                      <button type="button" class="btn btn-success btn-sm" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    <!-- formulario de Registro -->
+                    <div class="modal-body">
+                      <form>
+                        <!-- E-mail -->
+                        <div class="form-group">
+                          <input type="email" class="form-control" id="email" placeholder="E-Mail">
+                          </div>
+                          <!-- password -->
+                          <div class="form-group">
+                          <input type="password" class="form-control" id="password" placeholder="Contraseña">
+                          </div>
+                          <!-- Repeticion de password -->
+                          <div class="form-group">
+                          <input type="password" class="form-control" id="password" placeholder="Repetir contraseña">
+                          </div>
+                          <!-- Validacion de terminos y condiciones -->
+                          <div class="form-group" id="terminos">
+                          <label ><input type="radio"> Acepto terminos y condiciones</label>
+                          </div>
+                      </form>
+                    </div>
+                    <!-- Boton de Registracion final -->
+                    <div class="modal-footer d-flex justify-content-center" id="cierre">
+                      <button type="button" class="btn btn-outline-success btn-md" id="botonR">Registrate</button>
+                    </div>
+                      <!-- Imagen de linea -->
+                     <div class="social-media">
+                        <h3>O Ingresa con</h3>
+                        <!-- Imagenes links Redes Sociales -->
+                      <div class="items">
+                        <i class="fab fa-facebook-f"></i>
+                        <i class="fab fa-twitter"></i>
+                        <i class="fab fa-google"></i>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </li>
+          </ul>
+        </nav>
+      </div>
+      </div>
+
+      <!-- TERMINA NAVBAR -->
+
+
+
+        <!-- SECCION SUPERIOR CON TITULO TEXTO Y BOTON -->
+    <div class="altura-seccion1">
+      <div class="titulo row">
+        <section class="col-12 px-0 mt-4">
+        <!-- TITULO -->
+          <h1 class"titulo-principal">Compará, comprá, ahorrá</h1>
+        <!-- TEXTO -->
+          <p>Todos los precios de supermercados en un solo lugar</p>
+        <!-- BOTON DE COMPRAR AHORA -->
+          <button type="button" class="btn btn-lg btn-success comprar-ahora"><a href="index.html">Comprar ahora</a></button>
+        </section>
+      </div>
+    </div>
+    </div>
+  </header>
+
+
+
+        <!-- SECCION DE TARJETAS -->
+  <section class="tarjetas">
+    <div class="altura-tarjetas">
+    <div class="container">
+      <div class="row card-box d-flex justify-content-between align-items-center">
+
+          <!-- CARD 1 -->
+          <div class="card col-12 col-md-3 col-lg-3 mx-0 px-0">
+              <div class="card-body">
+                <span class="icon-balance"></span>
+                <h5 class="card-title">Compará</h5>
+                <p class="card-text">El primer paso para ahorrar: comparar antes de comprar. Precios, ofertas y plazos de entrega de cada super en tiempo real</p>
+              </div>
+          </div>
+
+              <!-- CARD 2 -->
+          <div class="card col-12 col-md-3 col-lg-3 mx-0 px-0">
+                  <div class="card-body">
+                    <span class="icon-shopping-basket"></span>
+                    <h5 class="card-title">Comprá</h5>
+                    <p class="card-text">Armá tu lista de compras del super de forma rápida y sencilla. Podrás crear listas personalizadas y consultarla cuando quieras.</p>
+                  </div>
+            </div>
+
+              <!-- CARD 3 -->
+          <div class="card card3 col-12 col-md-3 col-lg-3 mx-0 px-0">
+                  <div class="card-body">
+                    <span class="icon-save-money"></span>
+                    <h5 class="card-title">Ahorrá</h5>
+                    <p class="card-text">Enterate de todas las promociones bancarias de tu super más cercano. Seleccioná tu banco preferido y te enviaremos un recordatorio.</p>
+                  </div>
+          </div>
+      </div>
+    </div>
+    </div>
+  </section>
+
+
+          <!-- SECCION DE ICONOS DE SUPERMERCADOS -->
+      <section class="supermercados">
+        <div class="altura-supermercados">
+        <div class="container">
+          <div class="row">
+            <div class="iconos col-12 d-flex align-items-center justify-content-between">
+            <img src="assets/img/logo_coto_gris.png" alt="coto">
+            <img src="assets/img/logo_carrefour_gris.png" alt="carrefour">
+            <img src="assets/img/logo_dia_gris.png" alt="dia">
+            <img src="assets/img/logo_vea_gris.png" alt="vea">
+            <img src="assets/img/logo_la_anonima_gris.png" alt="anonima">
+            <img src="assets/img/logo_disco_gris.png" alt="disco">
+            <!-- <img src="assets/img/logo_jumbo_gris.png" alt="jumbo">
+            <img src="assets/img/logo_walmart_gris.png" alt="walmart"> -->
+            </div>
+          </div>
+        </div>
+        </div>
+      </section>
+
+        <!-- SECCION DE COMO FUNCIONA, UBICACION Y CELULARES -->
+    <section class="como-funciona">
+      <div class="altura-como-funciona">
+        <div class="container">
+          <div class="row seccion3">
+            <div class="col-12 col-sm-6 px-0 d-flex align-items-center">
+              <div class="como-funciona-texto">
+                <h2>¿Cómo funciona?</h2>
+                <p>Selecciona tu ubicación, añade productos a tu lista de compras y compara precios. Elige un envío y recibe los productos en tu casa </p>
+                <p class="my-0">Empieza a comprar</p>
+                <form class="mb-4" action="index.html" method="post">
+                  <input class="rounded-lg" type="text" name="cod-postal" value="Tu codigo postal">
+                </form>
+                </div>
+            </div>
+            <div class="div-telefonos col d-none col-sm-6 d-flex justify-content-end mx-0 px-0">
+            <img class="telefonos align-self-end" src="assets/img/devices.png" alt="telefonos">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+
+      <!-- FOOTER -->
+    <footer class="pie">
+      <div class="altura-footer">
+      <div class="container">
+        <div class="row d-flex justify-content-between">
+
+        <!-- ICONO Y TEXTO -->
+          <div class="col-5 d-flex justify-content-start my-auto px-0">
+            <span class="icon-superbuscado-iso-circle"><a href="#"></a></span>
+            <p class="texto-footer">Todos los precios de supermercados en un solo lugar </p>
+          </div>
+
+        <!-- LINKS A CONTACTO Y FAQ -->
+          <div class="links-footer my-auto col-4 px-0">
+
+        <!-- LINK A CONTACTO -->
+            <!-- Boton de acceso -->
+             <button type="button" class="btn btn-contacto" data-toggle="modal" data-target="#contacto" data-whatever="@contacto">Contacto</button>
+             <div class="modal fade" id="contacto" tabindex="-1" role="dialog"  aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <!-- Contenedor -->
+               <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <!-- Header -->
+                  <div class="modal-header">
+                    <h6 class="modal-title" id="exampleModalLabel">Necesitas que te ayudemos? <br> Escribinos!</h6>
+                    <!-- Boton de cierre -->
+                    <button type="button" class="btn btn-success btn-sm" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <!-- Formulario -->
+               <div class="modal-body">
+                 <form>
+                   <!-- Nombre -->
+                   <div class="form-group" >
+                   <input type="text" class="form-control"placeholder="Nombre" id="nombre">
+                   </div>
+                   <!-- Mail -->
+                   <div class="form-group">
+                   <input type="email" class="form-control" placeholder="E-mail" id="email">
+                   </div>
+                   <!-- Mensaje -->
+                   <div class="form-group">
+                   <label for="message-text" class="col-form-label"> Mensaje </label>
+                    <textarea class="form-control"> Dejanos aca tu mensaje :)</textarea>
+                   </div>
+                 </form>
+              </div>
+              <!-- Envio de formulario -->
+             <div class="modal-footer" id="cierre">
+               <button type="button" class="btn btn-outline-success btn-md" id="botonR">Enviar mensaje</button>
+             </div>
+           </div>
+         </div>
+        </div>
+
+          <!-- LINK A PREGUNTAS FRECUENTES - FAQ -->
+            <div><button type="button" class="btn btn-nada"><a href="faq.html">Preguntas frecuentes</a> </button> </div>
+
+          </div>
+
+          <!-- LINK A REDES SOCIALES -->
+
+          <div class="redes-footer col-3 col-lg-3 d-flex align-items-center justify-content-center mx-0 px-0">
+            <a href="https://www.instagram.com/superbuscado/"><span class="icon-instagram-circle"></span></a>
+            <a href="https://www.facebook.com/Superbuscado-109530587096091/"><span class="icon-facebook-circle"></span></a>
+            <a href="https://twitter.com/super_buscado"><span class="icon-twitter-circle"></span></a>
+          </div>
+        </div>
+      </div>
+      </div>
+    </footer>
+
+
+<!-- Javascript propio de Bootstrap -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+</html>
