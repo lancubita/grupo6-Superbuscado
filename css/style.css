@@ -4,6 +4,7 @@ body {
   background-color: #F2F2F2;
 }
 
+
 /* ---------------------------------------------------
     Navbar
 ----------------------------------------------------- */
@@ -70,16 +71,17 @@ body {
   justify-content: flex-end;
 }
 
-.button-dropdown {
+.btn-category,
+.btn-location,
+.btn-account {
   display: flex;
   align-items: center;
-  background: none;
-  border: none;
   padding: 0;
 }
 
+
 .button-account,
-.button-sections {
+.btn-sections {
   display: flex;
   flex-direction: column;
 }
@@ -87,9 +89,15 @@ body {
 p.my-account,
 p.user-account,
 p.category-lists,
-p.products-lists {
+p.products-lists,
+p.location {
   margin: 0;
   text-align: left;
+}
+
+.category-lists:hover,
+.location:hover {
+  color: #61BC31;
 }
 
 p.my-account {
@@ -131,8 +139,16 @@ p.user-account {
   padding-left: 10px;
 }
 
-.icon-star.green,
-.icon-arrow-down.green {
+.border-left {
+  border-left: 1px solid #909090;
+}
+
+.icon-location {
+  font-size: 20px;
+  padding-right: 10px;
+}
+
+.green {
   color: #61BC31;
 }
 
@@ -152,13 +168,100 @@ p.products-lists {
   padding-top: 8em;
 }
 
-img.producto {
-  width: 100%;
-  padding-top: 5%;
+.icon-happy-container {
+  color: #61BC31;
+  font-size: 80px;
+  text-align: center;
+  margin: auto;
 }
+
+.card:hover{
+  border: 1px solid #61BC31;
+}
+
+p.descripcion-producto {
+  font-size: 14px;
+  color: #909090;
+}
+
+.linea-separacion {
+  margin-top: 0;
+}
+
+p.costo {
+  font-size: 20px;
+  font-weight: 900;
+  color: #61BC31;
+  text-align: center;
+  margin-bottom: 0;
+}
+
+p.preciopromedio {
+  color: #B9B9B9;
+  font-size: 14px;
+  padding-top: 0px;
+  text-align: center;
+  margin: 0;
+}
+
+.btn-agregar,
+.btn-agregar:focus {
+  border-radius: 7px;
+  background-color: #61BC31;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 700;
+  text-align: center;
+  padding: 1px;
+}
+
+.btn-agregar:hover {
+  color:  #61BC31;
+  border: 1px solid  #61BC31;
+  background-color: #fff;
+}
+
+/* ---------------------------------------------------
+    Botón carrito
+----------------------------------------------------- */
+
+.btn-carrito {
+  display: flex;
+  justify-content: center;
+}
+
+.icon-shopping-cart {
+  background-color: #61BC31;
+  padding: 15px;
+  border-radius: 50px;
+  font-size: 20px;
+  color: #fff;
+  bottom: 60px;
+  position: fixed;
+}
+
+.icon-shopping-cart:hover {
+  background-color: #fff;
+  color: #61BC31;
+  border: 1px solid #61BC31;
+}
+
+
+/* ---------------------------------------------------
+    Media
+----------------------------------------------------- */
+
 
 @media (max-width: 576px) {
   .input-search {
     display: none;
+  }
+
+  p.costo {
+    font-size: 20px;
+  }
+
+  button.btn-agregar {
+    font-size: 12px;
   }
 }

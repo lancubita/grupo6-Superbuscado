@@ -1,0 +1,33 @@
+/* Css para quitar lineas de bootstrap */
+#cierre{
+  border-top: 0;
+}
+.modal-header {
+  border-bottom: 0;
+}
+/* Css para quitar bordes de formulario */
+#nombre, #email {
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;
+  padding: 0;
+}
+/* Titulo */
+h6 {
+  color: green;
+  font-family: Lato;
+  text-align: center;
+  width: 100%;
+}
+/* Formulario */
+.form-group{
+  color: grey;
+  font-family: Lato;
+  margin-left: 60px;
+  margin-right: 60px;
+}
+#botonR{
+  border-radius: 50px;
+  width: 40%;
+  margin-right: 60px;
+}
