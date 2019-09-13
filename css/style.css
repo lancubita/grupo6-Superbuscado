@@ -4,6 +4,21 @@ body {
   background-color: #F2F2F2;
 }
 
+/* ---------------------------------------------------
+    Colors
+----------------------------------------------------- */
+
+.green {
+  color: #61BC31;
+}
+
+.grey-light {
+  color: #545454;
+}
+
+.grey-dark {
+  color: #545454;
+}
 
 /* ---------------------------------------------------
     Navbar
@@ -148,10 +163,6 @@ p.user-account {
   padding-right: 10px;
 }
 
-.green {
-  color: #61BC31;
-}
-
 p.category-lists {
   color: #000;
 }
@@ -168,6 +179,10 @@ p.products-lists {
   padding-top: 8em;
 }
 
+.titulo-categoria {
+  color: #545454;
+}
+
 .icon-happy-container {
   color: #61BC31;
   font-size: 80px;
@@ -175,7 +190,7 @@ p.products-lists {
   margin: auto;
 }
 
-.card:hover{
+.card-hover:hover{
   border: 1px solid #61BC31;
 }
 
