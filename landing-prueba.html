@@ -69,60 +69,56 @@
               <h2>Compará, comprá, ahorrá.</h2>
             </div>
 
-            <div class="col-4">
+            <div class="col-12 col-md-5 col-lg-5 col-xl-4 mt-2">
               <h5 class="subtitle">Todos los precios de supermercados en un sólo lugar.</h5>
             </div>
 
-            <div class="col-12 mt-4">
-              <a class="btn-comprar-ahora py-2 px-4" href="#">Comprar ahora</a>
+            <div class="col-12 mt-3 btn-comprar">
+              <a class="btn-comprar-ahora py-2 px-4 mt-2" href="index.html">Comprar ahora</a>
             </div>
 
 
           </div>
         </div>
 
+        <!-- _____________________ Cards desktop _____________________  -->
+
+        <section class="col-12 card-box">
+          <div class="row d-flex justify-content-center">
+
+            <div class="col-10 col-md-4">
+              <div class="card card-landing card-compara">
+                <span class="icon-balance icon-landing green"></span>
+                <h5 class="card-landing-title d-flex justify-content-center mt-4">Compará</h5>
+                <p class="card-landing-text mt-3">El primer paso para ahorrar: comparar antes de comprar. Precios, ofertas y plazos de entrega de cada super en tiempo real.</p>
+              </div>
+            </div>
+
+            <div class="col-10 col-md-4">
+              <div class="card card-landing card-compra">
+                <span class="icon-shopping-basket icon-landing green"></span>
+                <h5 class="card-landing-title d-flex justify-content-center mt-4">Comprá</h5>
+                <p class="card-landing-text mt-3">Armá tu lista de compras del super de forma rápida y sencilla. Podrás crear listas personalizadas y consultarla cuando quieras. </p>
+              </div>
+            </div>
+
+            <div class="col-10 col-md-4">
+              <div class="card card-landing">
+                <span class="icon-save-money icon-landing green"></span>
+                <h5 class="card-landing-title d-flex justify-content-center mt-4">Ahorrá</h5>
+                <p class="card-landing-text mt-3">Enterate de todas las promociones bancarias de tu super más cercano. Seleccioná tu banco preferido y te enviaremos un recordatorio.</p>
+              </div>
+            </div>
+
+          </div>
+        </section>
+
+
+
       </div>
     </div>
 
   </header>
-
-  <!-- _____________________ Cards _____________________  -->
-
-  <section class="container">
-
-    <div class="row d-flex justify-content-between">
-
-      <div class="col-4 card-box">
-        <div class="card card-landing p-5">
-          <span class="icon-balance icon-landing green"></span>
-          <h5 class="card-landing-title d-flex justify-content-center mt-4">Compará</h5>
-          <p class="card-landing-text mt-3">El primer paso para ahorrar: comparar antes de comprar. Precios, ofertas y plazos de entrega de cada super en tiempo real.</p>
-        </div>
-      </div>
-
-      <div class="col-4 card-box">
-        <div class="card card-landing p-5">
-          <span class="icon-shopping-basket icon-landing green"></span>
-          <h5 class="card-landing-title d-flex justify-content-center mt-4">Comprá</h5>
-          <p class="card-landing-text mt-3">Armá tu lista de compras del super de forma rápida y sencilla. Podrás crear listas personalizadas y consultarla cuando quieras. </p>
-        </div>
-      </div>
-
-      <div class="col-4 card-box">
-        <div class="card card-landing p-5">
-          <span class="icon-save-money icon-landing green"></span>
-          <h5 class="card-landing-title d-flex justify-content-center mt-4">Ahorrá</h5>
-          <p class="card-landing-text mt-3">Enterate de todas las promociones bancarias de tu super más cercano. Seleccioná tu banco preferido y te enviaremos un recordatorio.</p>
-        </div>
-      </div>
-
-    </div>
-
-  </section>
-
-  <div class="bg-white">
-
-  </div>
 
   <!-- _____________________ Marcas Supermercados _____________________  -->
 
@@ -164,26 +160,26 @@
     <div class="container">
       <div class="row">
 
-        <div class="col-6">
+        <div class="col-12 col-md-6 margin-device">
           <h3 class="title-2">¿Cómo funciona?</h3>
           <div class="row mt-4">
-            <div class="col-8">
+            <div class="col-12">
               <p class="subtitle">Selecciona tu ubicación, añade productos a tu lista de compras y compara precios. Elige un envío y recibe los productos en tu casa. </p>
             </div>
           </div>
-          <p class="subtitle mt-5">Empieza a comprar</p>
+          <p class="subtitle-postal">Empieza a comprar</p>
 
-          <div class="row">
+          <div class="row form-postal">
             <div class="col-6">
-              <form class="" action="index.html" method="post">
-                <input type="text" class="form-control" id="validationCustom04" placeholder="Tu código postal">
+              <form action="index.html" method="post">
+                <input type="text" class="form-control" id="validationCustom04" placeholder="Código postal">
               </form>
             </div>
           </div>
 
         </div>
 
-        <div class="col-6">
+        <div class="col-12 col-md-6 display-device">
           <img class="img-device mt-5" src="assets/img/devices.png" alt="">
         </div>
 
@@ -193,21 +189,24 @@
 
   <!-- _____________________ Footer _____________________  -->
 
-  <footer class="bg-footer d-flex align-items-center">
+  <footer class="bg-footer">
     <div class="container">
-      <div class="row">
+      <div class="row display-footer">
 
-        <div class="col-4 d-flex flex-row align-items-center">
+        <div class="col-12 col-md-1 display-footer">
           <span class="icon-superbuscado-iso-circle green iso-footer"></span>
-          <p class="slogan-footer ml-4">Todos los precios de <br> supermercados en un sólo lugar.</p>
         </div>
 
-        <div class="col-4 border-left px-5">
+        <div class="col-12 col-md-5 col-lg-4 display-footer">
+          <p class="slogan-footer">Todos los precios de <br> supermercados en un sólo lugar.</p>
+        </div>
+
+        <div class="col-10 col-md-3 col-lg-4 border-footer">
           <a class="link-footer" href="#"><p>Contactanos</p></a>
           <a class="link-footer" href="#"><p class="mb-0">Preguntas frecuentes</p></a>
         </div>
 
-        <div class="col-4 border-left px-5 d-flex justify-content-around align-items-center">
+        <div class="col-8 col-md-3 d-flex justify-content-around align-items-center">
           <a class="icon-social-footer" href="https://www.facebook.com/Superbuscado-109530587096091/"><span class="icon-facebook-circle green icon-social-footer"></span></a>
           <a class="icon-social-footer" href="https://www.instagram.com/superbuscado/"><span class="icon-instagram-circle green icon-social-footer"></span></a>
           <a class="icon-social-footer" href="https://twitter.com/super_buscado"><span class="icon-twitter-circle green icon-social-footer"></span></a>
