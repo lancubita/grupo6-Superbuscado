@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'icomoon';
-  src:  url('fonts/icomoon.eot?mfb4y');
-  src:  url('fonts/icomoon.eot?mfb4y#iefix') format('embedded-opentype'),
-    url('fonts/icomoon.ttf?mfb4y') format('truetype'),
-    url('fonts/icomoon.woff?mfb4y') format('woff'),
-    url('fonts/icomoon.svg?mfb4y#icomoon') format('svg');
+  src:  url('fonts/icomoon.eot?je9e81');
+  src:  url('fonts/icomoon.eot?je9e81#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?je9e81') format('truetype'),
+    url('fonts/icomoon.woff?je9e81') format('woff'),
+    url('fonts/icomoon.svg?je9e81#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -25,7 +25,7 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-superbuscado-logo:before {
+.icon-contact-list:before {
   content: "\e900";
 }
 .icon-twitter-circle:before {
