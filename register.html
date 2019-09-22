@@ -7,7 +7,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Login</title>
+    <title>Registro</title>
 
     <!-- Bootstrap CSS CDN -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
@@ -32,9 +32,9 @@
 
 <body class="bg-grey">
 
-  <!-- _____________________ Login _____________________ -->
+  <!-- _____________________ Register _____________________ -->
 
-  <section class="container container-index">
+  <section class="container pt-5">
     <div class="row d-flex justify-content-center">
 
       <div class="col-12 col-md-8 col-lg-5">
@@ -43,12 +43,20 @@
           <div class="row">
             <div class="col-12">
 
-              <div class="icon-happy-container mt-3"></div>
+              <div class="icon-piggy-bank mt-3"></div>
 
-              <p class="title-login">¡Bienvenid@! <br> Nos encanta tenerte de vuelta.</p>
+              <p class="title-login">¡Este es tu primer paso <br> para comenzar a ahorrar!</p>
 
               <form class="" action="index.html" method="post">
                 <div class="row">
+
+                  <div class="col-12 d-flex justify-content-center">
+                    <input class="input-login" type="text" name="name" value="" placeholder="Nombre">
+                  </div>
+
+                  <div class="col-12 d-flex justify-content-center">
+                    <input class="input-login" type="text" name="lastname" value="" placeholder="Apellido">
+                  </div>
 
                   <div class="col-12 d-flex justify-content-center">
                     <input class="input-login" type="email" name="email" value="" placeholder="Email">
@@ -59,13 +67,15 @@
                   </div>
 
                   <div class="col-12 d-flex justify-content-center">
-                    <button class="btn-ingresar" type="submit" name="button">Ingresar</button>
+                    <button class="btn-ingresar" type="submit" name="button">Registrate</button>
                   </div>
 
                 </div>
               </form>
 
-              <p class="redirect">¿Todavía no tenés una cuenta? <a class="redirect-link" href="register.html">Registrate</a></p>
+              <p class="terminos-y-condiciones">Al hacer clic en "Registrate", acepta nuestros <a class="redirect-link" href="#">términos de servicio y política de privacidad.</a>  Ocasionalmente le enviaremos correos electrónicos relacionados con la cuenta.</p>
+
+              <p class="redirect">¿Ya tenes una cuenta? <a class="redirect-link" href="login.html">Iniciar sesión</a></p>
 
             </div>
 
