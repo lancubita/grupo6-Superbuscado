@@ -1,3 +1,27 @@
+<?php
+
+  // Validación de imagen de perfil
+
+  if($_FILES) {
+
+    if($_FILES['imagen']['error'] != 0) {
+      echo 'Error al cargar imagen <br>';
+
+    } else {
+      $ext = pathinfo($_FILES['imagen']['name'], PATHINFO_EXTENSION);
+
+      if ($ext != 'jpg' && $ext != 'jpeg') {
+        echo 'La imagen debe ser jpg o jpeg <br>';
+
+      } else {
+        // subir Imagen
+        move_uploaded_file($_FILES['imagen']['tmp_name'], 'files/profile_image.' . $ext);
+      }
+    }
+  }
+
+?>
+
 <!DOCTYPE html>
 <html>
 
@@ -19,6 +43,7 @@
   <link rel="stylesheet" href="css/lists_style.css">
   <link rel="stylesheet" href="css/profile.css">
   <link rel="stylesheet" href="css/login_register_contact.css">
+  <link rel="stylesheet" href="css/edit_profile.css">
 
   <!-- icons -->
   <link rel="stylesheet" href="assets/icons/icons.css">
@@ -102,156 +127,77 @@
   <section class="container" style="padding-top:6em;">
     <div class="row d-flex justify-content-center">
 
-      <div class="col-12">
+      <form class="col-12" action="edit_profile.php" method="post" enctype="multipart/form-data">
         <div class="row d-flex justify-content-center">
 
-          <!-- personal info -->
+          <!-- editar imagen de perfil -->
 
-          <div class="col-12 col-md-6 col-lg-4">
-            <div class="row d-flex justify-content-center">
-
-              <div class="avatar" style="background-image: url(assets/img/img_profile.jpg)"></div>
-
-              <div class="col-12">
-                <div class="card card-profile pb-4">
-                  <div class="row">
-
-                    <div class="col-12">
-                      <h6 class="email-profile green brd-bottom-green">super.buscado@gmail.com</h6>
-                      <p class="personal-info mt-3 brd-bottom-grey"><b>Nombre:</b> Super</p>
-                      <p class="personal-info brd-bottom-grey"><b>Apellido:</b> Buscado</p>
-                      <p class="personal-info brd-bottom-grey"><b>DNI:</b> 12.345.678</p>
-                      <p class="personal-info"><b>Teléfono:</b> 011 5678-9101</p>
-                    </div>
-
-                    <div class="col-12">
-                      <a class="btn-ingresar" href="edit_profile.php">Editar</a>
-                    </div>
-
-                  </div>
-                </div>
-              </div>
-
+          <div class="col-12">
+            <div class="d-flex justify-content-center">
+              <label class="avatar" for="img-profile" style="background-image: url(assets/img/img_profile.jpg)"><p class="editar-avatar">Editar</p></label>
+              <input class="avatar" type="file" name="imagen" value="" id="img-profile">
             </div>
           </div>
 
-          <!-- Address -->
+          <div class="col-12 col-sm-10 col-md-8 col-lg-6 col-xl-4">
+            <div class="card card-profile pb-4">
 
-          <div class="col-12 col-md-6 col-lg-4">
-            <div class="row">
+              <!-- editar datos de perfil -->
 
-              <div class="col-12 mb-4">
-                <div class="card card-address pb-4">
-
-                   <p class="card-title-address brd-bottom-green"><b>Domicilio de envío</b></p>
-                   <p class="address-info mt-3 mb-1"><b>Av. Monrroe 860</b> <br>Capital Federal (1428), CABA</p>
-
-                   <div class="">
-                     <a class="btn-ingresar" href="edit_address_shipping.html">Editar</a>
-                   </div>
-
+              <div class="row email-edit mb-2">
+                <div class="col-4 col-lg-3 col-xl-3 d-flex justify-content-start align-items-center">
+                  <label for="">Email:</label>
+                </div>
+                <div class="col-8 col-lg-9 col-xl-9 d-flex justify-content-start">
+                  <input type="email" name="email" value="">
                 </div>
               </div>
 
-              <div class="col-12 mb-4">
-                <div class="card card-address2 pb-4">
-
-                   <p class="card-title-address brd-bottom-green"><b>Domicilio de facturación</b></p>
-                   <p class="address-info mt-3 mb-1"><b>Av. Monrroe 860</b> <br>Capital Federal (1428), CABA</p>
-
-                   <div class="">
-                     <a class="btn-ingresar" href="edit_address_fact.html">Editar</a>
-                   </div>
-
+              <div class="row nombre-edit mb-2">
+                <div class="col-4 col-lg-3 col-xl-3 d-flex justify-content-start align-items-center">
+                  <label for="">Nombre:</label>
                 </div>
+                <div class="col-8 col-lg-9 col-xl-9 d-flex justify-content-start">
+                  <input type="text" name="nombre" value="">
+                </div>
+              </div>
+
+              <div class="row apellido-edit mb-2">
+                <div class="col-4 col-lg-3 col-xl-3 d-flex justify-content-start align-items-center">
+                  <label for="">Apellido:</label>
+                </div>
+                <div class="col-8 col-lg-9 col-xl-9 d-flex justify-content-start">
+                  <input type="text" name="apellido" value="">
+                </div>
+              </div>
+
+              <div class="row dni-edit mb-2">
+                <div class="col-4 col-lg-3 col-xl-3 d-flex justify-content-start align-items-center">
+                  <label for="">DNI:</label>
+                </div>
+                <div class="col-8 col-lg-9 col-xl-9 d-flex justify-content-start">
+                  <input type="number" name="dni" value="">
+                </div>
+              </div>
+
+              <div class="row tel-edit mb-2">
+                <div class="col-4 col-lg-3 col-xl-3 d-flex justify-content-start align-items-center">
+                  <label for="">Teléfono:</label>
+                </div>
+                <div class="col-8 col-lg-9 col-xl-9 d-flex justify-content-start">
+                  <input type="tel" name="tel" value="">
+                </div>
+              </div>
+
+              <div class="d-flex justify-content-end">
+                <input class="btn-ingresar mb-0" type="submit" name="" value="Guardar">
               </div>
 
             </div>
           </div>
 
         </div>
-      </div>
-
-      <!-- credit cards -->
-
-      <div class="col-12">
-        <div class="row d-flex justify-content-center">
-
-          <div class="col-12 col-md-6 col-lg-4 mb-4">
-            <div class="card card-bank pb-4">
-              <div class="row">
-
-                <div class="col-12">
-                  <h6 class="card-title-info brd-bottom-white"><b>Mis bancos</b></h6>
-                </div>
-
-                <div class="col-12 info-card-bank">
-                  <div class="info-card-bank2 d-flex align-items-center">
-                    <div class="logo-bank" style="background-image: url(assets/img/icbc.jpg)"></div>
-                    <div class="">
-                      <p class="text-card-bank">Terminada en 3033</p>
-                      <p class="text-card-bank">Vence: 04/2022</p>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="col-12 info-card-bank">
-                  <div class="info-card-bank2 d-flex align-items-center">
-                    <div class="logo-bank" style="background-image: url(assets/img/bbva.jpg)"></div>
-                    <div class="">
-                      <p class="text-card-bank">Terminada en 1552</p>
-                      <p class="text-card-bank">Vence: 09/2020</p>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="col-12 mt-2">
-                  <a class="btn-ingresar" href="edit_bank.html">Editar</a>
-                </div>
-
-              </div>
-            </div>
-          </div>
-
-          <!-- Tarjetas de fidelización -->
-
-          <div class="col-12 col-md-6 col-lg-4 mb-4">
-            <div class="card card-bank pb-4">
-              <div class="row">
-
-                <div class="col-12">
-                  <h6 class="card-title-info brd-bottom-white"><b>Tarjetas de fidelización</b></h6>
-                </div>
-
-                <div class="col-12 info-card-bank">
-                  <div class="info-card-bank2 d-flex align-items-center">
-                    <div class="logo-bank" style="background-image: url(assets/img/club_la_nacion.jpg)"></div>
-                    <div class="">
-                      <p class="text-card-bank"><b>Club La Nación</b></p>
-                      <p class="text-card-bank">Premium</p>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="col-12 info-card-bank">
-                  <div class="info-card-bank2 d-flex align-items-center">
-                    <div class="logo-bank" style="background-image: url(assets/img/club_dia.jpg)"></div>
-                    <div class="">
-                      <p class="text-card-bank"><b>Club día</b></p>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="col-12 mt-2">
-                  <a class="btn-ingresar" href="edit_card.html">Editar</a>
-                </div>
-
-              </div>
-            </div>
-          </div>
-
-        </div>
-      </div>
+      </form>
 
     </div>
   </section>
