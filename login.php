@@ -2,32 +2,52 @@
 
 session_start();
 
-require_once('controladores/funciones.php');
 
-$errors = validar($_POST);
+// ------------- Cookie para remember (checkbox) -------------
 
-if (!$errors) {
+if(isset($_COOKIE['user_logged'])) {
 
-  verificarUsuario($_POST);
+  $usuarios = file_get_contents('user_data.json');
+  $array_data = json_decode($usuarios, true);
 
+  foreach($usuarios['usuarios'] as $usuario) {
+    if($usuario['email']==$_COOKIE['user_logged']){
+      $_SESSION['usuario'] = $usuario;
+    }
+
+    header('location: create_list.php');
+  }
 }
 
+// ------------- Verificar datos de usuario -------------
 
 if($_POST){
+  require_once('controladores/funciones.php');
 
-  // COOKIE PARA REMEMBER
-  if(isset($_COOKIE['user_logged'])) {
+  // Que los campos no esten vacios
 
-    $usuarios = file_get_contents('user_data.json');
-    $array_data = json_decode($usuarios, true);
+  $error = validar_campos_vacios_login($_POST);
 
-    foreach($usuarios['usuarios'] as $usuario) {
-      if($usuario['email']==$_COOKIE['user_logged']){
-        $_SESSION['usuario'] = $usuario;
-      }
+  // Si no hay error
+
+  if (!$error) {
+
+    // Verificar que exista el usuarios
+
+    $usuario = verificarUsuario($_POST);
+
+    if (!$usuario) {
+      $noExiste = 'El usuario no existe o la contraseña es incorrecta';
+    }
+
+    // Si existe en $_SESSION, redirigir
+
+    if ($usuario) {
+      $_SESSION['user'] = $usuario;
       header('location: create_list.php');
     }
   }
+}
 
 ?>
 
@@ -80,21 +100,25 @@ if($_POST){
 
               <p class="title-login">¡Bienvenid@! <br> Nos encanta tenerte de vuelta.</p>
 
+              <div class="mb-2" style="color: #e03232; background-color: color: #f8d7da;">
+                <?= $noExiste ?? '' ?>
+              </div>
+
               <form class="" action="login.php" method="post">
                 <div class="row">
 
                   <div class="col-12 d-flex justify-content-center">
                     <input class="input-login" type="email" name="email" value="<?php $_POST['email'] ?? '' ?> " placeholder="Email">
                   </div>
-                  <div class="alert alert-danger">
-                    <?=$errors['email'] ?? '' ?>
+                  <div class="col-12 mb-2" style="color: #e03232; background-color: color: #f8d7da;">
+                    <?=$error['email'] ?? '' ?>
                   </div>
 
                   <div class="col-12 d-flex justify-content-center">
                     <input class="input-login" type="password" name="password" value="<?php $_POST['password'] ?? '' ?>" placeholder="Contraseña">
                   </div>
-                  <div class="alert alert-danger">
-                    <?=$errors['password'] ?? '' ?>
+                  <div class="col-12 mb-2" style="color: #e03232; background-color: color: #f8d7da;">
+                    <?=$error['password'] ?? '' ?>
                   </div>
 
                   <div class="col-12 remember">

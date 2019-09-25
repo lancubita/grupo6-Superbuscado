@@ -1,8 +1,8 @@
 <?php
 
-// ------------- Validar datos de usuario -------------
+// ------------- Validar campos vacios (Registro) -------------
 
-function validar ($datos) {
+function validar_campos_vacios_registro ($datos) {
 
   $errors = [];
 
@@ -22,6 +22,26 @@ function validar ($datos) {
   return $errors;
 
 }
+
+// ------------- Validar campos vacios (Login) -------------
+
+function validar_campos_vacios_login ($datos) {
+
+  $error = [];
+
+  if(empty($datos['email']))
+  {
+    $error['email'] = 'El campo de email está vacío';
+  }
+  if(empty($datos['password']))
+  {
+    $error['password'] = 'El campo de contraseña está vacío';
+  }
+
+  return $error;
+
+}
+
 
 // ------------- Validar password -------------
 
@@ -89,23 +109,17 @@ function verificarUsuario($verificar) {
 
   if($verificar) {
 
-    $json = file_get_contents(user_data.json);
+    $json = file_get_contents('user_data.json');
 
     $usuarios = json_decode($json, true);
 
-    foreach($usuarios as $usuario) {
-
-      if(($verificar['email'] === $usuario['email']) && password_verify($verificar['password'],
-
-      $usuario['password'])) {
-
-        header("location: create_list.php");
+    foreach($usuarios['usuarios'] as $usuario) {
+      if(($verificar['email'] === $usuario['email']) && password_verify($verificar['password'], $usuario['password'])) {
+        return $usuario;
       }
-
     }
 
   }
 
+  return false;
 }
-
-// ------------- Cookie para remember (checkbox) -------------

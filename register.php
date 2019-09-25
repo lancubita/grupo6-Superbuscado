@@ -7,7 +7,7 @@ require_once('controladores/funciones.php');
 if($_POST){
 
   // Validar datos de usuario
-  $errors = validar($_POST);
+  $errors = validar_campos_vacios_registro($_POST);
   // Validar password
   $error_clave = validar_password($_POST);
 

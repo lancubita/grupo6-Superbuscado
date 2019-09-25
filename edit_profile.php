@@ -97,7 +97,7 @@ if($_FILES) {
                   <a class="nav-link btn-account" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     <div class="button-account">
                       <p class="my-account">Mi cuenta</p>
-                      <p class="user-account">Nombre de usuario</p>
+                      <p class="user-account"><?=$_SESSION['user']['email']?></p>
                     </div>
                     <span class="icon-arrow-down white"></span>
                   </a>
@@ -116,7 +116,7 @@ if($_FILES) {
                     </li>
 
                     <li>
-                      <a class="dropdown-item" href="landing.html">Salir</a>
+                      <a class="dropdown-item" href="logout.php">Salir</a>
                     </li>
 
                   </ul>

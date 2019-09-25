@@ -1,52 +1,10 @@
 {
     "usuarios": [
         {
-            "name": "Lucas",
-            "lastname": "lopez",
-            "email": "lucasgonzalez_1985@hotmail.com",
-            "password": "$2y$10$psvecPY\/NYwO\/5ShUFNZP.4t8TDgAtTCE5kaXjx1AJRgTqDPjhSFC"
-        },
-        {
-            "name": "Sof\u00eda",
-            "lastname": "Lancuba",
+            "name": "sofia",
+            "lastname": "lancuba",
             "email": "sofia.lancuba@gmail.com",
-            "password": "$2y$10$A8Nn81zvliwL8epgUELrhOcMQd.HICI7qsNiEBJMc\/QOGWEJpCw0m"
-        },
-        {
-            "name": "Sof\u00eda",
-            "lastname": "Lancuba",
-            "email": "sofia.lancuba@gmail.com",
-            "password": "$2y$10$2uUT8EQXunZUOGXNzfvgS.dCHwFy1h8C4Lt1PgoYE9p7SB6qDecYK"
-        },
-        {
-            "name": "Sof\u00eda",
-            "lastname": "Lancuba",
-            "email": "sofia.lancuba@gmail.com",
-            "password": "$2y$10$OJ\/gGBpszqpuRpWlvN.9hON9WcT18rQB\/0kPxfPoCjH7ELv8m1bU."
-        },
-        {
-            "name": "Sof\u00eda",
-            "lastname": "Lancuba",
-            "email": "sofia.lancuba@gmail.com",
-            "password": "$2y$10$\/.FvWQ3oAjfoZSFAo9wGJOkmmZp5bbIXvG.VxohLEBa2cb\/.MPN3e"
-        },
-        {
-            "name": "Sof\u00eda",
-            "lastname": "Lancuba",
-            "email": "sofia.lancuba@gmail.com",
-            "password": "$2y$10$fVSFPKQDtXPc5U13ObEM4uWjbLpks1xziC3HIz7S3c1LdUROqgoGS"
-        },
-        {
-            "name": "Sof\u00eda",
-            "lastname": "Lancuba",
-            "email": "sofia.lancuba@gmail.com",
-            "password": "$2y$10$5gEre8m7G0N1iZh40elQG.yVCw2jbLpeRLItWeZba7cfwiDUpMfzm"
-        },
-        {
-            "name": "Sof\u00eda",
-            "lastname": "Lancuba",
-            "email": "sofia.lancuba@gmail.com",
-            "password": "$2y$10$BWL9utC6FQvIQzQjh5ywZOo2wtGln3jXwoe.YIlwxVGpF51WtXVg."
+            "password": "$2y$10$y6PZygdMSobm\/9YKGph2v.iFJtkQ8xN92d5E2JsqIEOs2bUPC1wPO"
         }
     ]
 }
