@@ -69,7 +69,7 @@ session_start();
                   <a class="nav-link btn-account" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     <div class="button-account">
                       <p class="my-account">Mi cuenta</p>
-                      <p class="user-account">Nombre de usuario</p>
+                      <p class="user-account"><?=$_SESSION['user']['email']?></p>
                     </div>
                     <span class="icon-arrow-down white"></span>
                   </a>
@@ -88,7 +88,7 @@ session_start();
                     </li>
 
                     <li>
-                      <a class="dropdown-item" href="landing.php">Salir</a>
+                      <a class="dropdown-item" href="logout.php">Salir</a>
                     </li>
 
                   </ul>
@@ -123,11 +123,11 @@ session_start();
                   <div class="row">
 
                     <div class="col-12">
-                      <h6 class="email-profile green brd-bottom-green">super.buscado@gmail.com</h6>
-                      <p class="personal-info mt-3 brd-bottom-grey"><b>Nombre:</b> Super</p>
-                      <p class="personal-info brd-bottom-grey"><b>Apellido:</b> Buscado</p>
-                      <p class="personal-info brd-bottom-grey"><b>DNI:</b> 12.345.678</p>
-                      <p class="personal-info"><b>Teléfono:</b> 011 5678-9101</p>
+                      <h6 class="email-profile green brd-bottom-green"><?=$_SESSION['user']['email']?></h6>
+                      <p class="personal-info mt-3 brd-bottom-grey"><b>Nombre: </b><?=$_SESSION['user']['name']?></p>
+                      <p class="personal-info brd-bottom-grey"><b>Apellido: </b> <?=$_SESSION['user']['lastname']?></p>
+                      <p class="personal-info brd-bottom-grey"><b>DNI: </b><?=$_SESSION['user']['dni']?></p>
+                      <p class="personal-info"><b>Teléfono: </b> <?=$_SESSION['user']['tel']?></p>
                     </div>
 
                     <div class="col-12">
