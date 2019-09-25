@@ -45,8 +45,8 @@ label.avatar[for="img-profile"]:hover > .editar-avatar{
 
 /* ---------- editar datos de perfil ---------- */
 
-.email-edit {
-  margin-top: 70px;
+.profile-edit {
+  margin-top: 60px;
 }
 
 .email-edit input,

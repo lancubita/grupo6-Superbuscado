@@ -1,3 +1,9 @@
+<?php
+
+session_start();
+
+?>
+
 <!DOCTYPE html>
 <html>
 
@@ -44,7 +50,7 @@
 
           <!-- logo -->
           <div class="col-4 col-sm-4 col-md-3 col-lg-2">
-            <a href="landing.html"><img class="logo-navbar" src="assets/img/logo-superbuscado-white.png" alt=""></a>
+            <a href="new_list.php"><img class="logo-navbar" src="assets/img/logo-superbuscado-white.png" alt=""></a>
           </div>
 
           <!-- menu user -->
@@ -68,7 +74,7 @@
                   <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
 
                     <li>
-                      <a class="dropdown-item" href="mis_listas.html">Mis listas</a>
+                      <a class="dropdown-item" href="mis_listas.php">Mis listas</a>
                     </li>
 
                     <li>
@@ -76,11 +82,11 @@
                     </li>
 
                     <li>
-                      <a class="dropdown-item" href="profile.html">Mis datos</a>
+                      <a class="dropdown-item" href="profile.php">Mis datos</a>
                     </li>
 
                     <li>
-                      <a class="dropdown-item" href="landing.html">Salir</a>
+                      <a class="dropdown-item" href="landing.php">Salir</a>
                     </li>
 
                   </ul>
@@ -104,13 +110,13 @@
 
         <div class="card card-new-list">
           <div class="d-flex justify-content-end" style="height: 10px">
-            <a class="icon-exit-circle" href="create_list.html"></a>
+            <a class="icon-exit-circle" href="create_list.php"></a>
           </div>
 
           <p class="title-card-new-list">Agregar una nueva lista</p>
 
 
-          <form class="d-flex justify-content-center" action="index.html" method="post">
+          <form class="d-flex justify-content-center" action="index.php" method="post">
 
             <div class="row">
 
@@ -119,7 +125,7 @@
               </div>
 
               <div class="col-12 d-flex justify-content-center">
-                <a href="mis_listas.html">
+                <a href="mis_listas.php">
                   <button class="form-list-btn-crear" type="button" name="button">Crear</button>
                 </a>
 
@@ -150,7 +156,7 @@
         </div>
 
         <div class="col-10 col-md-3 col-lg-4 border-footer">
-          <a class="link-footer" href="contact_index.html"><p>Contactanos</p></a>
+          <a class="link-footer" href="contact_index.php"><p>Contactanos</p></a>
           <a class="link-footer" href="#"><p class="mb-0">Preguntas frecuentes</p></a>
         </div>
 

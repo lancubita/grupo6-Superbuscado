@@ -1,3 +1,9 @@
+<?php
+
+session_start();
+
+?>
+
 <!DOCTYPE html>
 <html>
 
@@ -102,12 +108,12 @@
 
           <!-- logo -->
           <div class="col-4 col-sm-4 col-md-3 col-lg-2">
-            <a href="landingpage.html"><img class="logo-navbar" src="assets/img/logo-superbuscado-white.png" alt=""></a>
+            <a href="index.php"><img class="logo-navbar" src="assets/img/logo-superbuscado-white.png" alt=""></a>
           </div>
 
           <!-- search -->
           <div class="display-flex col-7 col-sm-7 col-md-8 col-lg-6">
-            <form class="form-search" action="index.html" method="post">
+            <form class="form-search" action="index.php" method="post">
 
               <input class="input-search" type="search" name="buscar" placeholder="Nombre de producto o marca">
               <button class="icon-search" type="button" name="button"></button>
@@ -136,19 +142,19 @@
                   <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
 
                     <li>
-                      <a class="dropdown-item" href="#">Mis listas</a>
+                      <a class="dropdown-item" href="mis_listas.php">Mis listas</a>
                     </li>
 
                     <li>
-                      <a class="dropdown-item" href="#">Configuración</a>
+                      <a class="dropdown-item" href="#">Compras</a>
                     </li>
 
                     <li>
-                      <a class="dropdown-item" href="#">Contacto</a>
+                      <a class="dropdown-item" href="profile.php">Mis datos</a>
                     </li>
 
                     <li>
-                      <a class="dropdown-item" href="#">Salir</a>
+                      <a class="dropdown-item" href="landing.php">Salir</a>
                     </li>
 
                   </ul>
@@ -284,7 +290,7 @@
                     alimentaria de los productos a través nuestro
                     formulario de contacto.</p>
 
-                    <a href="#" class="btn-agregar px-2">
+                    <a href="contact_index.php" class="btn-agregar px-2">
                       Consultar
                     </a>
 
@@ -415,7 +421,7 @@
 
   <div class="col-12">
     <div>
-      <a class="btn-carrito" href="#carrito"><span class="icon-shopping-cart"></span></a>
+      <a class="btn-carrito" href="mis_listas.php"><span class="icon-shopping-cart"></span></a>
     </div>
   </div>
 
@@ -434,7 +440,7 @@
         </div>
 
         <div class="col-10 col-md-3 col-lg-4 border-footer">
-          <a class="link-footer" href="#"><p>Contactanos</p></a>
+          <a class="link-footer" href="contact_index.php"><p>Contactanos</p></a>
           <a class="link-footer" href="#"><p class="mb-0">Preguntas frecuentes</p></a>
         </div>
 

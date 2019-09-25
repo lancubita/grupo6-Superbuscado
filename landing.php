@@ -1,3 +1,9 @@
+<?php
+
+session_start();
+
+?>
+
 <!DOCTYPE html>
 <html>
 
@@ -46,8 +52,8 @@
         <!-- Botones login -->
 
         <div class="col-9 navbar">
-          <a class="btn-login mr-4" href="login.html">Iniciar sesión</a>
-          <a class="btn-register py-1 px-3" href="register.html">Registrate</a>
+          <a class="btn-login mr-4" href="login.php">Iniciar sesión</a>
+          <a class="btn-register py-1 px-3" href="register.php">Registrate</a>
         </div>
 
       </div>
@@ -74,7 +80,7 @@
             </div>
 
             <div class="col-12 mt-3 btn-comprar">
-              <a class="btn-comprar-ahora py-2 px-4 mt-2" href="login-register.html">Comprar ahora</a>
+              <a class="btn-comprar-ahora py-2 px-4 mt-2" href="register.php">Comprar ahora</a>
             </div>
 
 
@@ -202,8 +208,8 @@
         </div>
 
         <div class="col-10 col-md-3 col-lg-4 border-footer">
-          <a class="link-footer" href="contact.html"><p>Contactanos</p></a>
-          <a class="link-footer" href="faq.html"><p class="mb-0">Preguntas frecuentes</p></a>
+          <a class="link-footer" href="contact.php"><p>Contactanos</p></a>
+          <a class="link-footer" href="faq.php"><p class="mb-0">Preguntas frecuentes</p></a>
         </div>
 
         <div class="col-8 col-md-3 d-flex justify-content-around align-items-center">

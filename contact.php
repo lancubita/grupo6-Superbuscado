@@ -7,13 +7,14 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Registro</title>
+    <title>Contacto</title>
 
     <!-- Bootstrap CSS CDN -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
 
     <!-- styles CSS -->
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/landing_style.css">
     <link rel="stylesheet" href="css/login_register_contact.css">
 
     <!-- icons -->
@@ -30,22 +31,32 @@
 
 </head>
 
-<body class="bg-grey">
+<body class="bg-grey-login-register">
 
-  <!-- _____________________ Register _____________________ -->
+  <section class="container" style="height:80px">
+    <div class="row d-flex justify-content-center">
+      <div class="col-3 d-flex justify-content-center">
+        <a href="landing.php">
+          <img class="logo-navbar-green" src="assets/img/logo-superbuscado-green.png" alt="">
+        </a>
+      </div>
+    </div>
+  </section>
 
-  <section class="container pt-5">
+  <!-- _____________________ Contact _____________________ -->
+
+  <section class="container">
     <div class="row d-flex justify-content-center">
 
-      <div class="col-12 col-md-8 col-lg-5">
+      <div class="col-12 col-md-8 col-lg-5 mt-3">
         <div class="card card-shadow d-flex align-items-center">
 
           <div class="row">
             <div class="col-12">
 
-              <div class="icon-piggy-bank mt-3"></div>
+              <div class="icon-contact-list mt-3"></div>
 
-              <p class="title-login">¡Este es tu primer paso <br> para comenzar a ahorrar!</p>
+              <p class="title-login">¿Necesitas que te ayudemos? <br> Escribinos!</p>
 
               <form class="" action="index.html" method="post">
                 <div class="row">
@@ -55,32 +66,19 @@
                   </div>
 
                   <div class="col-12 d-flex justify-content-center">
-                    <input class="input-login" type="text" name="lastname" value="" placeholder="Apellido">
-                  </div>
-
-                  <div class="col-12 d-flex justify-content-center">
                     <input class="input-login" type="email" name="email" value="" placeholder="Email">
                   </div>
 
                   <div class="col-12 d-flex justify-content-center">
-                    <input class="input-login" type="password" name="password" value="" placeholder="Contraseña">
+                    <textarea class="card message-area" name="name">Dejanos acá tu mensaje ;)</textarea>
                   </div>
 
-                  <div class="col-12 remember">
-                    <input class="" type="checkbox" name="remember" id="remember4" value="remember">
-                    <label for="remember4">Recordar usuario</label>
-                  </div>
-
-                  <div class="col-12 d-flex justify-content-center">
-                    <button class="btn-ingresar" type="submit" name="button">Registrate</button>
+                  <div class="col-12 d-flex justify-content-center mt-2">
+                    <button class="btn-ingresar" type="submit" name="button">Enviar mensaje</button>
                   </div>
 
                 </div>
               </form>
-
-              <p class="terminos-y-condiciones">Al hacer clic en "Registrate", acepta nuestros <a class="redirect-link" href="#">términos de servicio y política de privacidad.</a>  Ocasionalmente le enviaremos correos electrónicos relacionados con la cuenta.</p>
-
-              <p class="redirect">¿Ya tenes una cuenta? <a class="redirect-link" href="login.html">Iniciar sesión</a></p>
 
             </div>
 
@@ -91,6 +89,35 @@
 
     </div>
   </section>
+
+  <!-- _____________________ Footer _____________________  -->
+
+  <footer class="footer-index">
+    <div class="container">
+      <div class="row display-footer">
+
+        <div class="col-12 col-md-1 display-footer">
+          <span class="icon-superbuscado-iso-circle green iso-footer"></span>
+        </div>
+
+        <div class="col-12 col-md-5 col-lg-4 display-footer">
+          <p class="slogan-footer">Todos los precios de <br> supermercados en un sólo lugar.</p>
+        </div>
+
+        <div class="col-10 col-md-3 col-lg-4 border-footer">
+          <a class="link-footer" href="contact.html"><p>Contactanos</p></a>
+          <a class="link-footer" href="faq.html"><p class="mb-0">Preguntas frecuentes</p></a>
+        </div>
+
+        <div class="col-8 col-md-3 d-flex justify-content-around align-items-center">
+          <a class="icon-social-footer" href="https://www.facebook.com/Superbuscado-109530587096091/"><span class="icon-facebook-circle green icon-social-footer"></span></a>
+          <a class="icon-social-footer" href="https://www.instagram.com/superbuscado/"><span class="icon-instagram-circle green icon-social-footer"></span></a>
+          <a class="icon-social-footer" href="https://twitter.com/super_buscado"><span class="icon-twitter-circle green icon-social-footer"></span></a>
+        </div>
+
+      </div>
+    </div>
+  </footer>
 
 
 

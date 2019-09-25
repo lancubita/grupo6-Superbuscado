@@ -1,3 +1,9 @@
+<?php
+
+session_start();
+
+?>
+
 <!DOCTYPE html>
 <html>
 
@@ -44,7 +50,7 @@
 
           <!-- logo -->
           <div class="col-4 col-sm-4 col-md-3 col-lg-2">
-            <a href="landing.html"><img class="logo-navbar" src="assets/img/logo-superbuscado-white.png" alt=""></a>
+            <a href="create_list.php"><img class="logo-navbar" src="assets/img/logo-superbuscado-white.png" alt=""></a>
           </div>
 
           <!-- menu user -->
@@ -68,7 +74,7 @@
                   <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
 
                     <li>
-                      <a class="dropdown-item" href="create_list.html">Mis listas</a>
+                      <a class="dropdown-item" href="create_list.php">Mis listas</a>
                     </li>
 
                     <li>
@@ -76,11 +82,11 @@
                     </li>
 
                     <li>
-                      <a class="dropdown-item" href="profile.html">Mis datos</a>
+                      <a class="dropdown-item" href="profile.php">Mis datos</a>
                     </li>
 
                     <li>
-                      <a class="dropdown-item" href="landing.html">Salir</a>
+                      <a class="dropdown-item" href="landing.php">Salir</a>
                     </li>
 
                   </ul>
@@ -102,7 +108,7 @@
 
         <div class="col-12">
           <p class="title-create-list">Crea tu primer lista del super!</p>
-          <a class="icon-plus-circle d-flex justify-content-center" href="new_list.html"></a>
+          <a class="icon-plus-circle d-flex justify-content-center" href="new_list.php"></a>
         </div>
 
       </div>
@@ -123,7 +129,7 @@
         </div>
 
         <div class="col-10 col-md-3 col-lg-4 border-footer">
-          <a class="link-footer" href="contact_index.html"><p>Contactanos</p></a>
+          <a class="link-footer" href="contact_index.php"><p>Contactanos</p></a>
           <a class="link-footer" href="#"><p class="mb-0">Preguntas frecuentes</p></a>
         </div>
 

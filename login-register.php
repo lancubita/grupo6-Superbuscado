@@ -1,3 +1,9 @@
+<?php
+
+session_start();
+
+?>
+
 <!DOCTYPE html>
 <html>
 
@@ -36,7 +42,7 @@
   <section class="container" style="height:80px">
     <div class="row d-flex justify-content-center">
       <div class="col-3 d-flex justify-content-center">
-        <a href="landing.html">
+        <a href="landing.php">
           <img class="logo-navbar-green" src="assets/img/logo-superbuscado-green.png" alt="">
         </a>
       </div>

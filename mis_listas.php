@@ -1,3 +1,9 @@
+<?php
+
+session_start();
+
+?>
+
 <!DOCTYPE html>
 <html>
 
@@ -44,12 +50,12 @@
 
           <!-- logo -->
           <div class="col-4 col-sm-4 col-md-3 col-lg-2">
-            <a href="landingpage.html"><img class="logo-navbar" src="assets/img/logo-superbuscado-white.png" alt=""></a>
+            <a href="mis_listas.php"><img class="logo-navbar" src="assets/img/logo-superbuscado-white.png" alt=""></a>
           </div>
 
           <!-- search -->
           <div class="display-flex col-7 col-sm-7 col-md-8 col-lg-6">
-            <form class="form-search" action="index.html" method="post">
+            <form class="form-search" action="index.php" method="post">
 
               <input class="input-search" type="search" name="buscar" placeholder="Nombre de producto o marca">
               <button class="icon-search" type="button" name="button"></button>
@@ -78,7 +84,7 @@
                   <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
 
                     <li>
-                      <a class="dropdown-item" href="mis_listas.html">Mis listas</a>
+                      <a class="dropdown-item" href="mis_listas.php">Mis listas</a>
                     </li>
 
                     <li>
@@ -86,11 +92,11 @@
                     </li>
 
                     <li>
-                      <a class="dropdown-item" href="profile.html">Mis datos</a>
+                      <a class="dropdown-item" href="profile.php">Mis datos</a>
                     </li>
 
                     <li>
-                      <a class="dropdown-item" href="landing.html">Salir</a>
+                      <a class="dropdown-item" href="landing.php">Salir</a>
                     </li>
 
                   </ul>
@@ -133,8 +139,8 @@
       <!-- Titulo categoría -->
 
       <div class="col-12 d-flex justify-content-start">
-        <a class="icon-plus-circle mr-2" style="font-size: 1.5rem;" href="new_list.html"></a>
-        <a href="new_list.html">
+        <a class="icon-plus-circle mr-2" style="font-size: 1.5rem;" href="new_list.php"></a>
+        <a href="new_list.php">
           <ha class="title-new-list"><b>Nueva lista</b></h4>
         </a>
       </div>
@@ -147,7 +153,7 @@
           <div class="row">
 
             <div class="col-11">
-              <a href="index.html">
+              <a href="index.php">
                 <div class="row">
                   <div class="col-5 col-sm-4 col-md-5">
                     <div class="card card-quantity d-flex justify-content-center">
@@ -167,7 +173,7 @@
 
 
             <div class="col-1 exit-icon">
-              <a class="icon-exit-circle" href="create_list.html"></a>
+              <a class="icon-exit-circle" href="create_list.php"></a>
             </div>
 
           </div>
@@ -193,7 +199,7 @@
         </div>
 
         <div class="col-10 col-md-3 col-lg-4 border-footer">
-          <a class="link-footer" href="contact_index.html"><p>Contactanos</p></a>
+          <a class="link-footer" href="contact_index.php"><p>Contactanos</p></a>
           <a class="link-footer" href="#"><p class="mb-0">Preguntas frecuentes</p></a>
         </div>
 

@@ -61,7 +61,6 @@
 
 .remember input[type="checkbox"]:checked + label:before {
   background-color: #69B948;
-
 }
 
 .btn-ingresar {
@@ -92,7 +91,7 @@
 }
 
 /* ---------------------------------------------------
-    Login
+    Register
 ----------------------------------------------------- */
 
 .terminos-y-condiciones {

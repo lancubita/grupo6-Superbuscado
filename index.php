@@ -1,3 +1,9 @@
+<?php
+
+session_start();
+
+?>
+
 <!DOCTYPE html>
 <html>
 
@@ -101,7 +107,7 @@
 
           <!-- logo -->
           <div class="col-4 col-sm-4 col-md-3 col-lg-2">
-            <a href="landing.html"><img class="logo-navbar" src="assets/img/logo-superbuscado-white.png" alt=""></a>
+            <a href="landing.php"><img class="logo-navbar" src="assets/img/logo-superbuscado-white.png" alt=""></a>
           </div>
 
           <!-- search -->
@@ -135,7 +141,7 @@
                   <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
 
                     <li>
-                      <a class="dropdown-item" href="mis_listas.html">Mis listas</a>
+                      <a class="dropdown-item" href="mis_listas.php">Mis listas</a>
                     </li>
 
                     <li>
@@ -143,11 +149,11 @@
                     </li>
 
                     <li>
-                      <a class="dropdown-item" href="profile.html">Mis datos</a>
+                      <a class="dropdown-item" href="profile.php">Mis datos</a>
                     </li>
 
                     <li>
-                      <a class="dropdown-item" href="landing.html">Salir</a>
+                      <a class="dropdown-item" href="landing.php">Salir</a>
                     </li>
 
                   </ul>
@@ -212,7 +218,7 @@
 
       <div class="col-6 col-md-4 col-lg-3 col-xl-2">
         <div class="card card-hover my-3 p-3">
-          <a class="mb-3" href="producto_descripcion.html">
+          <a class="mb-3" href="producto_descripcion.php">
             <img class="icon-happy-container py-2 mb-3 d-flex justify-content-center" src="" alt="">
             <p class="descripcion-producto">Mayonesa Light Doypack Hellmanns 237 Gr.</p>
             <hr class="linea-separacion">
@@ -415,7 +421,7 @@
 
   <div class="col-12">
     <div>
-      <a class="btn-carrito" href="mis_listas.html"><span class="icon-shopping-cart"></span></a>
+      <a class="btn-carrito" href="mis_listas.php"><span class="icon-shopping-cart"></span></a>
     </div>
   </div>
 
@@ -434,8 +440,8 @@
         </div>
 
         <div class="col-10 col-md-3 col-lg-4 border-footer">
-          <a class="link-footer" href="contact_index.html"><p>Contactanos</p></a>
-          <a class="link-footer" href="faq.html"><p class="mb-0">Preguntas frecuentes</p></a>
+          <a class="link-footer" href="contact_index.php"><p>Contactanos</p></a>
+          <a class="link-footer" href="faq.php"><p class="mb-0">Preguntas frecuentes</p></a>
         </div>
 
         <div class="col-8 col-md-3 d-flex justify-content-around align-items-center">

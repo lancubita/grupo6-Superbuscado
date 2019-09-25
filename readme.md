@@ -51,6 +51,7 @@ Ingresar a ```http://localhost/proyecto/index.html```
 - [Sidebar con bootstrap](https://bootstrapious.com/p/bootstrap-sidebar)
 - [Bootstrap](https://getbootstrap.com/)
 - [Como escribir Markdown](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet#links)
+- [Cómo modificar el input file] (http://mialtoweb.es/modificar-el-input-file/)
 
 
 

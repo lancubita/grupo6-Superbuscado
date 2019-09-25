@@ -1,24 +1,33 @@
 <?php
 
-  // Validación de imagen de perfil
+session_start();
 
-  if($_FILES) {
 
-    if($_FILES['imagen']['error'] != 0) {
-      echo 'Error al cargar imagen <br>';
+$error_img ='';
+$ext_img ='';
+
+// Validación de imagen de perfil
+
+if($_FILES) {
+
+  if($_FILES['imagen']['error'] != 0) {
+    echo 'Error al cargar imagen <br>';
+
+  } else {
+    $ext = pathinfo($_FILES['imagen']['name'], PATHINFO_EXTENSION);
+
+    if ($ext != 'jpg' && $ext != 'jpeg') {
+      echo 'La imagen debe ser jpg o jpeg <br>';
 
     } else {
-      $ext = pathinfo($_FILES['imagen']['name'], PATHINFO_EXTENSION);
 
-      if ($ext != 'jpg' && $ext != 'jpeg') {
-        echo 'La imagen debe ser jpg o jpeg <br>';
+      // subir Imagen
+      $imagen = uniqid('perfil-');
 
-      } else {
-        // subir Imagen
-        move_uploaded_file($_FILES['imagen']['tmp_name'], 'files/profile_image.' . $ext);
-      }
+      move_uploaded_file($_FILES['imagen']['tmp_name'], 'files/' . $imagen . '.' . $ext);
     }
   }
+}
 
 ?>
 
@@ -135,14 +144,23 @@
           <div class="col-12">
             <div class="d-flex justify-content-center">
               <label class="avatar" for="img-profile" style="background-image: url(assets/img/img_profile.jpg)"><p class="editar-avatar">Editar</p></label>
-              <input class="avatar" type="file" name="imagen" value="" id="img-profile">
+              <input class="avatar" type="file" name="imagen" value="" id="img-profile" onchange='cambiar()'>
             </div>
           </div>
 
           <div class="col-12 col-sm-10 col-md-8 col-lg-6 col-xl-4">
             <div class="card card-profile pb-4">
 
-              <!-- editar datos de perfil -->
+              <!-- mostrar nombre de la imagen subida -->
+
+              <div class="row profile-edit">
+                <div class="col-12 d-flex justify-content-center mb-3">
+                  <div class="green" id="info"></div>
+                  <div class="green"><?=$ext_img?></div>
+                </div>
+              </div>
+
+              <!-- editar email -->
 
               <div class="row email-edit mb-2">
                 <div class="col-4 col-lg-3 col-xl-3 d-flex justify-content-start align-items-center">
@@ -153,6 +171,8 @@
                 </div>
               </div>
 
+              <!-- editar nombre -->
+
               <div class="row nombre-edit mb-2">
                 <div class="col-4 col-lg-3 col-xl-3 d-flex justify-content-start align-items-center">
                   <label for="">Nombre:</label>
@@ -161,6 +181,8 @@
                   <input type="text" name="nombre" value="">
                 </div>
               </div>
+
+              <!-- editar apellido -->
 
               <div class="row apellido-edit mb-2">
                 <div class="col-4 col-lg-3 col-xl-3 d-flex justify-content-start align-items-center">
@@ -171,6 +193,8 @@
                 </div>
               </div>
 
+              <!-- editar dni -->
+
               <div class="row dni-edit mb-2">
                 <div class="col-4 col-lg-3 col-xl-3 d-flex justify-content-start align-items-center">
                   <label for="">DNI:</label>
@@ -179,6 +203,8 @@
                   <input type="number" name="dni" value="">
                 </div>
               </div>
+
+              <!-- editar telefono -->
 
               <div class="row tel-edit mb-2">
                 <div class="col-4 col-lg-3 col-xl-3 d-flex justify-content-start align-items-center">
@@ -245,6 +271,12 @@
   <!-- jQuery Custom Scroller CDN -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script>
 
+  <script>
+    function cambiar(){
+      var pdrs = document.getElementById('img-profile').files[0].name;
+      document.getElementById('info').innerHTML = pdrs;
+    }
+  </script>
 
 </body>
 
