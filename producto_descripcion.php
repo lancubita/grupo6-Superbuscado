@@ -1,3 +1,10 @@
+<?php
+
+session_start();
+
+ ?>
+
+
 <!DOCTYPE html>
 <html>
 
@@ -15,6 +22,7 @@
   <!-- styles CSS -->
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/sidebar_style.css">
+  <link rel="stylesheet" href="css/producto_descripcion_style.css">
   <link rel="stylesheet" href="css/landing_style.css">
 
   <!-- icons -->
@@ -101,7 +109,7 @@
 
           <!-- logo -->
           <div class="col-4 col-sm-4 col-md-3 col-lg-2">
-            <a href="landing.html"><img class="logo-navbar" src="assets/img/logo-superbuscado-white.png" alt=""></a>
+            <a href="landingpage.html"><img class="logo-navbar" src="assets/img/logo-superbuscado-white.png" alt=""></a>
           </div>
 
           <!-- search -->
@@ -135,19 +143,19 @@
                   <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
 
                     <li>
-                      <a class="dropdown-item" href="mis_listas.html">Mis listas</a>
+                      <a class="dropdown-item" href="#">Mis listas</a>
                     </li>
 
                     <li>
-                      <a class="dropdown-item" href="#">Compras</a>
+                      <a class="dropdown-item" href="#">Configuración</a>
                     </li>
 
                     <li>
-                      <a class="dropdown-item" href="profile.html">Mis datos</a>
+                      <a class="dropdown-item" href="#">Contacto</a>
                     </li>
 
                     <li>
-                      <a class="dropdown-item" href="landing.html">Salir</a>
+                      <a class="dropdown-item" href="#">Salir</a>
                     </li>
 
                   </ul>
@@ -164,139 +172,138 @@
 
     <nav class="second-navbar py-2">
       <nav class="container">
-        <div class="row">
+          <div class="row">
 
-          <nav class="display-flex col-6 col-md-3 col-lg-2">
-            <a class="btn-category" id="sidebarCollapse" href="#">
-              <span class="icon-star green"></span>
-              <div class="btn-sections">
-                <p class="category-lists">Categoría</p>
-                <p class="products-lists">Destacados</p>
-              </div>
-              <span class="icon-arrow-down green"></span>
-            </a>
-          </nav>
+            <nav class="display-flex col-6 col-md-3 col-lg-2">
+              <a class="btn-category" id="sidebarCollapse" href="#">
+                <span class="icon-star green"></span>
+                <div class="btn-sections">
+                  <p class="category-lists">Categoría</p>
+                  <p class="products-lists">Destacados</p>
+                </div>
+                <span class="icon-arrow-down green"></span>
+              </a>
+            </nav>
 
-          <!-- Ubicación -->
+            <!-- Ubicación -->
 
-          <nav class="display-flex col-6 col-md-9 col-lg-10 border-left">
-            <a class="btn-location" href="#">
-              <span class="icon-location green"></span>
-              <p class="location">Capital Federal 1429</p>
-            </a>
-          </nav>
+            <nav class="display-flex col-6 col-md-9 col-lg-10 border-left">
+              <a class="btn-location" href="#">
+                <span class="icon-location green"></span>
+                <p class="location">Capital Federal 1429</p>
+              </a>
+            </nav>
 
 
-        </div>
+          </div>
       </nav>
     </nav>
 
   </header>
 
-  <!-- _____________________ Product catalog _____________________ -->
+  <!-- _____________________ Descripción Producto _____________________ -->
 
   <!-- Titulo categoría -->
 
   <section class="container container-index">
     <div class="row">
       <div class="col-12">
-        <h5 class="mt-3 titulo-categoria"><b>Almacén /</b> Aderezos y especias</h5>
+        <h5 class="mt-3 titulo-categorian"><b>Almacén /</b> Aderezos y especias</h5>
       </div>
     </div>
   </section>
 
-  <!-- Productos -->
+  <!-- Descripción -->
 
   <section class="container">
-    <div class="row d-flex justify-content-center">
+    <div class="row">
 
-      <div class="col-6 col-md-4 col-lg-3 col-xl-2">
-        <div class="card card-hover my-3 p-3">
-          <a class="mb-3" href="producto_descripcion.html">
-            <img class="icon-happy-container py-2 mb-3 d-flex justify-content-center" src="" alt="">
-            <p class="descripcion-producto">Mayonesa Light Doypack Hellmanns 237 Gr.</p>
-            <hr class="linea-separacion">
-            <p class="costo">$45,99</p>
-            <p class="preciopromedio">Precio promedio</p>
-          </a>
-          <a href="#" class="btn-agregar">
-            Agregar a la lista
-          </a>
-        </div>
-      </div>
+      <div class="col-12">
+        <div class="card card-brd-green my-3 p-3">
 
-      <div class="col-6 col-md-4 col-lg-3 col-xl-2">
-        <div class="card card-hover my-3 p-3">
-          <a class="mb-3" href="#">
-            <img class="icon-happy-container py-2 mb-3 d-flex justify-content-center" src="" alt="">
-            <p class="descripcion-producto">Mayonesa Light Doypack Hellmanns 237 Gr.</p>
-            <hr class="linea-separacion">
-            <p class="costo">$45,99</p>
-            <p class="preciopromedio">Precio promedio</p>
-          </a>
-          <a href="#" class="btn-agregar">
-            Agregar a la lista
-          </a>
-        </div>
-      </div>
+          <div class="row">
 
-      <div class="col-6 col-md-4 col-lg-3 col-xl-2">
-        <div class="card card-hover my-3 p-3">
-          <a class="mb-3" href="#">
-            <img class="icon-happy-container py-2 mb-3 d-flex justify-content-center" src="" alt="">
-            <p class="descripcion-producto">Mayonesa Light Doypack Hellmanns 237 Gr.</p>
-            <hr class="linea-separacion">
-            <p class="costo">$45,99</p>
-            <p class="preciopromedio">Precio promedio</p>
-          </a>
-          <a href="#" class="btn-agregar">
-            Agregar a la lista
-          </a>
-        </div>
-      </div>
+            <div class="col-6">
+              <div class="row">
 
-      <div class="col-6 col-md-4 col-lg-3 col-xl-2">
-        <div class="card card-hover my-3 p-3">
-          <a class="mb-3" href="#">
-            <img class="icon-happy-container py-2 mb-3 d-flex justify-content-center" src="" alt="">
-            <p class="descripcion-producto">Mayonesa Light Doypack Hellmanns 237 Gr.</p>
-            <hr class="linea-separacion">
-            <p class="costo">$45,99</p>
-            <p class="preciopromedio">Precio promedio</p>
-          </a>
-          <a href="#" class="btn-agregar">
-            Agregar a la lista
-          </a>
-        </div>
-      </div>
+                <!-- img -->
 
-      <div class="col-6 col-md-4 col-lg-3 col-xl-2">
-        <div class="card card-hover my-3 p-3">
-          <a class="mb-3" href="#">
-            <img class="icon-happy-container py-2 mb-3 d-flex justify-content-center" src="" alt="">
-            <p class="descripcion-producto">Mayonesa Light Doypack Hellmanns 237 Gr.</p>
-            <hr class="linea-separacion">
-            <p class="costo">$45,99</p>
-            <p class="preciopromedio">Precio promedio</p>
-          </a>
-          <a href="#" class="btn-agregar">
-            Agregar a la lista
-          </a>
-        </div>
-      </div>
+                <div class="col-12 col-md-6 d-flex align-items-center">
+                  <img class="icon-happy-container d-flex justify-content-center" src="" alt="">
+                </div>
 
-      <div class="col-6 col-md-4 col-lg-3 col-xl-2">
-        <div class="card card-hover my-3 p-3">
-          <a class="mb-3" href="#">
-            <img class="icon-happy-container py-2 mb-3 d-flex justify-content-center" src="" alt="">
-            <p class="descripcion-producto">Mayonesa Light Doypack Hellmanns 237 Gr.</p>
-            <hr class="linea-separacion">
-            <p class="costo">$45,99</p>
-            <p class="preciopromedio">Precio promedio</p>
-          </a>
-          <a href="#" class="btn-agregar">
-            Agregar a la lista
-          </a>
+                <!-- descripción -->
+
+                <div class="col-12 col-md-6">
+                  <p class="green">Mayonesa Light Doypack Hellmanns 237 Gr.</p>
+                  <hr class="linea-separacion">
+                  <p class="costo-dscp">$45,99</p>
+                  <p class="preciopromedio-dscp">Precio promedio</p>
+
+                  <a href="#" class="btn-agregar px-2">
+                    Agregar a la lista
+                  </a>
+                </div>
+
+
+              </div>
+            </div>
+
+
+            <!-- especificaciones -->
+
+            <div class="col-12 col-md-6">
+              <div class="card card-brd-green">
+                <div class="card-header titulo-especificaciones p-0 border-0">
+                  Especificaciones
+                </div>
+
+                <ul class="list-group list-group-flush">
+
+                  <li class="list-group-item">
+                    <div class="row">
+                      <div class="col-6 green">
+                        Contenido
+                      </div>
+                      <div class="col-6 text-right grey-light">
+                        237gr.
+                      </div>
+                    </div>
+                  </li>
+
+                  <li class="list-group-item">
+                    <div class="row">
+                      <div class="col-6 green">
+                        Variedad
+                      </div>
+                      <div class="col-6 text-right grey-light">
+                        Aderezos
+                      </div>
+                    </div>
+                  </li>
+
+
+                  <li class="list-group-item">
+                    <p class="green">Ingredientes e información nutricional</p>
+
+                    <p class="grey-light text-justify">Si lo deseas podés obtener más información
+                    sobre los ingredientes y la composición
+                    alimentaria de los productos a través nuestro
+                    formulario de contacto.</p>
+
+                    <a href="#" class="btn-agregar px-2">
+                      Consultar
+                    </a>
+
+                  </li>
+                </ul>
+
+              </div>
+            </div>
+
+          </div>
+
+
         </div>
       </div>
 
@@ -308,7 +315,7 @@
   <section class="container">
     <div class="row">
       <div class="col-12">
-        <h5 class="mt-3 titulo-categoria"><b>Alimentos Congelados /</b> Pescados y mariscos</h5>
+        <h5 class="mt-3 titulo-categoria"><b>Otros productos que podrían interesarte</b></h5>
       </div>
     </div>
   </section>
@@ -415,7 +422,7 @@
 
   <div class="col-12">
     <div>
-      <a class="btn-carrito" href="mis_listas.html"><span class="icon-shopping-cart"></span></a>
+      <a class="btn-carrito" href="#carrito"><span class="icon-shopping-cart"></span></a>
     </div>
   </div>
 
@@ -434,8 +441,8 @@
         </div>
 
         <div class="col-10 col-md-3 col-lg-4 border-footer">
-          <a class="link-footer" href="contact_index.html"><p>Contactanos</p></a>
-          <a class="link-footer" href="faq.html"><p class="mb-0">Preguntas frecuentes</p></a>
+          <a class="link-footer" href="#"><p>Contactanos</p></a>
+          <a class="link-footer" href="#"><p class="mb-0">Preguntas frecuentes</p></a>
         </div>
 
         <div class="col-8 col-md-3 d-flex justify-content-around align-items-center">

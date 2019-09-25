@@ -1,0 +1,10 @@
+{
+    "usuarios": [
+        {
+            "name": "Lucas",
+            "lastname": "lopez",
+            "email": "lucasgonzalez_1985@hotmail.com",
+            "password": "$2y$10$psvecPY\/NYwO\/5ShUFNZP.4t8TDgAtTCE5kaXjx1AJRgTqDPjhSFC"
+        }
+    ]
+}

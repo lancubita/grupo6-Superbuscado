@@ -1,5 +1,7 @@
 <?php
 
+session_start();
+
   // Validación de imagen de perfil
 
   if($_FILES) {

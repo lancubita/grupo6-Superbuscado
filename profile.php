@@ -1,3 +1,10 @@
+<?php
+
+session_start();
+
+ ?>
+
+
 <!DOCTYPE html>
 <html>
 
@@ -7,7 +14,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Nueva lista</title>
+  <title>Mis datos</title>
 
   <!-- Bootstrap CSS CDN -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
@@ -17,6 +24,8 @@
   <link rel="stylesheet" href="css/sidebar_style.css">
   <link rel="stylesheet" href="css/landing_style.css">
   <link rel="stylesheet" href="css/lists_style.css">
+  <link rel="stylesheet" href="css/profile.css">
+  <link rel="stylesheet" href="css/login_register_contact.css">
 
   <!-- icons -->
   <link rel="stylesheet" href="assets/icons/icons.css">
@@ -95,39 +104,158 @@
 
   </header>
 
-  <!-- _____________________ new_list _____________________ -->
+  <!-- _____________________ Profile _____________________ -->
 
-  <section class="container container-index list-center">
+  <section class="container" style="padding-top:6em;">
     <div class="row d-flex justify-content-center">
 
       <div class="col-12">
+        <div class="row d-flex justify-content-center">
 
-        <div class="card card-new-list">
-          <div class="d-flex justify-content-end" style="height: 10px">
-            <a class="icon-exit-circle" href="create_list.html"></a>
-          </div>
+          <!-- personal info -->
 
-          <p class="title-card-new-list">Agregar una nueva lista</p>
+          <div class="col-12 col-md-6 col-lg-4">
+            <div class="row d-flex justify-content-center">
 
+              <div class="avatar" style="background-image: url(assets/img/img_profile.jpg)"></div>
 
-          <form class="d-flex justify-content-center" action="index.html" method="post">
+              <div class="col-12">
+                <div class="card card-profile pb-4">
+                  <div class="row">
 
-            <div class="row">
+                    <div class="col-12">
+                      <h6 class="email-profile green brd-bottom-green">super.buscado@gmail.com</h6>
+                      <p class="personal-info mt-3 brd-bottom-grey"><b>Nombre:</b> Super</p>
+                      <p class="personal-info brd-bottom-grey"><b>Apellido:</b> Buscado</p>
+                      <p class="personal-info brd-bottom-grey"><b>DNI:</b> 12.345.678</p>
+                      <p class="personal-info"><b>Teléfono:</b> 011 5678-9101</p>
+                    </div>
 
-              <div class="col-12 d-flex justify-content-center">
-                <input type="text" class="input-name-list" placeholder="Ingresa un nombre para tu lista">
-              </div>
+                    <div class="col-12">
+                      <a class="btn-ingresar" href="edit_profile.php">Editar</a>
+                    </div>
 
-              <div class="col-12 d-flex justify-content-center">
-                <a href="mis_listas.html">
-                  <button class="form-list-btn-crear" type="button" name="button">Crear</button>
-                </a>
-
+                  </div>
+                </div>
               </div>
 
             </div>
+          </div>
 
-          </form>
+          <!-- Address -->
+
+          <div class="col-12 col-md-6 col-lg-4">
+            <div class="row">
+
+              <div class="col-12 mb-4">
+                <div class="card card-address pb-4">
+
+                   <p class="card-title-address brd-bottom-green"><b>Domicilio de envío</b></p>
+                   <p class="address-info mt-3 mb-1"><b>Av. Monrroe 860</b> <br>Capital Federal (1428), CABA</p>
+
+                   <div class="">
+                     <a class="btn-ingresar" href="edit_address_shipping.html">Editar</a>
+                   </div>
+
+                </div>
+              </div>
+
+              <div class="col-12 mb-4">
+                <div class="card card-address2 pb-4">
+
+                   <p class="card-title-address brd-bottom-green"><b>Domicilio de facturación</b></p>
+                   <p class="address-info mt-3 mb-1"><b>Av. Monrroe 860</b> <br>Capital Federal (1428), CABA</p>
+
+                   <div class="">
+                     <a class="btn-ingresar" href="edit_address_fact.html">Editar</a>
+                   </div>
+
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- credit cards -->
+
+      <div class="col-12">
+        <div class="row d-flex justify-content-center">
+
+          <div class="col-12 col-md-6 col-lg-4 mb-4">
+            <div class="card card-bank pb-4">
+              <div class="row">
+
+                <div class="col-12">
+                  <h6 class="card-title-info brd-bottom-white"><b>Mis bancos</b></h6>
+                </div>
+
+                <div class="col-12 info-card-bank">
+                  <div class="info-card-bank2 d-flex align-items-center">
+                    <div class="logo-bank" style="background-image: url(assets/img/icbc.jpg)"></div>
+                    <div class="">
+                      <p class="text-card-bank">Terminada en 3033</p>
+                      <p class="text-card-bank">Vence: 04/2022</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-12 info-card-bank">
+                  <div class="info-card-bank2 d-flex align-items-center">
+                    <div class="logo-bank" style="background-image: url(assets/img/bbva.jpg)"></div>
+                    <div class="">
+                      <p class="text-card-bank">Terminada en 1552</p>
+                      <p class="text-card-bank">Vence: 09/2020</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-12 mt-2">
+                  <a class="btn-ingresar" href="edit_bank.html">Editar</a>
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+          <!-- Tarjetas de fidelización -->
+
+          <div class="col-12 col-md-6 col-lg-4 mb-4">
+            <div class="card card-bank pb-4">
+              <div class="row">
+
+                <div class="col-12">
+                  <h6 class="card-title-info brd-bottom-white"><b>Tarjetas de fidelización</b></h6>
+                </div>
+
+                <div class="col-12 info-card-bank">
+                  <div class="info-card-bank2 d-flex align-items-center">
+                    <div class="logo-bank" style="background-image: url(assets/img/club_la_nacion.jpg)"></div>
+                    <div class="">
+                      <p class="text-card-bank"><b>Club La Nación</b></p>
+                      <p class="text-card-bank">Premium</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-12 info-card-bank">
+                  <div class="info-card-bank2 d-flex align-items-center">
+                    <div class="logo-bank" style="background-image: url(assets/img/club_dia.jpg)"></div>
+                    <div class="">
+                      <p class="text-card-bank"><b>Club día</b></p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-12 mt-2">
+                  <a class="btn-ingresar" href="edit_card.html">Editar</a>
+                </div>
+
+              </div>
+            </div>
+          </div>
 
         </div>
       </div>

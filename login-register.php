@@ -1,3 +1,11 @@
+<?php
+
+session_start();
+
+ ?>
+
+
+
 <!DOCTYPE html>
 <html>
 
@@ -7,13 +15,14 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Registro</title>
+    <title>Inicia sesión</title>
 
     <!-- Bootstrap CSS CDN -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
 
     <!-- styles CSS -->
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/landing_style.css">
     <link rel="stylesheet" href="css/login_register_contact.css">
 
     <!-- icons -->
@@ -30,22 +39,70 @@
 
 </head>
 
-<body class="bg-grey">
+<body class="bg-grey-login-register">
 
-  <!-- _____________________ Register _____________________ -->
+  <section class="container" style="height:80px">
+    <div class="row d-flex justify-content-center">
+      <div class="col-3 d-flex justify-content-center">
+        <a href="landing.html">
+          <img class="logo-navbar-green" src="assets/img/logo-superbuscado-green.png" alt="">
+        </a>
+      </div>
+    </div>
+  </section>
 
-  <section class="container pt-5">
+  <!-- _____________________ Login _____________________ -->
+
+  <section class="container">
     <div class="row d-flex justify-content-center">
 
-      <div class="col-12 col-md-8 col-lg-5">
+      <div class="col-12 col-md-8 col-lg-5 mt-3">
         <div class="card card-shadow d-flex align-items-center">
 
           <div class="row">
             <div class="col-12">
 
-              <div class="icon-piggy-bank mt-3"></div>
+              <p class="title-login">Ingresá a tu cuenta</p>
 
-              <p class="title-login">¡Este es tu primer paso <br> para comenzar a ahorrar!</p>
+              <form class="" action="index.html" method="post">
+                <div class="row">
+
+                  <div class="col-12 d-flex justify-content-center">
+                    <input class="input-login" type="email" name="email" value="" placeholder="Email">
+                  </div>
+
+                  <div class="col-12 d-flex justify-content-center">
+                    <input class="input-login" type="password" name="password" value="" placeholder="Contraseña">
+                  </div>
+
+                  <div class="col-12 remember">
+                    <input class="" type="checkbox" name="remember" id="remember1" value="remember">
+                    <label for="remember1">Recordar usuario</label>
+                  </div>
+
+                  <div class="col-12 d-flex justify-content-center">
+                    <button class="btn-ingresar" type="submit" name="button">Ingresar</button>
+                  </div>
+
+                </div>
+              </form>
+
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+
+      <!-- _____________________ Register _____________________ -->
+
+      <div class="col-12 col-md-8 col-lg-5 my-3">
+        <div class="card card-shadow d-flex align-items-center">
+
+          <div class="row">
+            <div class="col-12">
+
+              <p class="title-login">Creá tu cuenta</p>
 
               <form class="" action="index.html" method="post">
                 <div class="row">
@@ -67,8 +124,8 @@
                   </div>
 
                   <div class="col-12 remember">
-                    <input class="" type="checkbox" name="remember" id="remember4" value="remember">
-                    <label for="remember4">Recordar usuario</label>
+                    <input class="" type="checkbox" name="remember" id="remember2" value="remember">
+                    <label for="remember2">Recordar usuario</label>
                   </div>
 
                   <div class="col-12 d-flex justify-content-center">
@@ -79,8 +136,6 @@
               </form>
 
               <p class="terminos-y-condiciones">Al hacer clic en "Registrate", acepta nuestros <a class="redirect-link" href="#">términos de servicio y política de privacidad.</a>  Ocasionalmente le enviaremos correos electrónicos relacionados con la cuenta.</p>
-
-              <p class="redirect">¿Ya tenes una cuenta? <a class="redirect-link" href="login.html">Iniciar sesión</a></p>
 
             </div>
 

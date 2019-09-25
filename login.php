@@ -1,3 +1,41 @@
+<?php
+
+session_start();
+
+require_once('controladores/funciones.php');
+
+$errors = validar($_POST);
+
+if (!$errors) {
+
+  verificarUsuario($_POST);
+
+}
+
+
+if($_POST){
+
+  // COOKIE PARA REMEMBER
+  if(isset($_COOKIE['user_logged'])) {
+
+    $usuarios = file_get_contents('user_data.json');
+    $array_data = json_decode($usuarios, true);
+
+    foreach($usuarios['usuarios'] as $usuario) {
+      if($usuario['email']==$_COOKIE['user_logged']){
+        $_SESSION['usuario'] = $usuario;
+      }
+      header('location: create_list.php');
+    }
+  }
+
+
+
+
+
+
+ ?>
+
 <!DOCTYPE html>
 <html>
 
@@ -47,15 +85,21 @@
 
               <p class="title-login">¡Bienvenid@! <br> Nos encanta tenerte de vuelta.</p>
 
-              <form class="" action="index.html" method="post">
+              <form class="" action="login.php" method="post">
                 <div class="row">
 
                   <div class="col-12 d-flex justify-content-center">
-                    <input class="input-login" type="email" name="email" value="" placeholder="Email">
+                    <input class="input-login" type="email" name="email" value="<?php $_POST['email'] ?? '' ?> " placeholder="Email">
+                  </div>
+                  <div class="alert alert-danger">
+                    <?=$errors['email'] ?? '' ?>
                   </div>
 
                   <div class="col-12 d-flex justify-content-center">
-                    <input class="input-login" type="password" name="password" value="" placeholder="Contraseña">
+                    <input class="input-login" type="password" name="password" value="<?php $_POST['password'] ?? '' ?>" placeholder="Contraseña">
+                  </div>
+                  <div class="alert alert-danger">
+                    <?=$errors['password'] ?? '' ?>
                   </div>
 
                   <div class="col-12 remember">

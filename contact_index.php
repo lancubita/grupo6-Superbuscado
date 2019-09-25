@@ -1,3 +1,9 @@
+<?php
+
+session_start();
+
+ ?>
+
 <!DOCTYPE html>
 <html>
 
@@ -7,16 +13,15 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Mis listas</title>
+  <title>Superbuscado</title>
 
   <!-- Bootstrap CSS CDN -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
 
   <!-- styles CSS -->
   <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/sidebar_style.css">
+  <link rel="stylesheet" href="css/login_register_contact.css">
   <link rel="stylesheet" href="css/landing_style.css">
-  <link rel="stylesheet" href="css/lists_style.css">
 
   <!-- icons -->
   <link rel="stylesheet" href="assets/icons/icons.css">
@@ -44,22 +49,12 @@
 
           <!-- logo -->
           <div class="col-4 col-sm-4 col-md-3 col-lg-2">
-            <a href="landingpage.html"><img class="logo-navbar" src="assets/img/logo-superbuscado-white.png" alt=""></a>
-          </div>
-
-          <!-- search -->
-          <div class="display-flex col-7 col-sm-7 col-md-8 col-lg-6">
-            <form class="form-search" action="index.html" method="post">
-
-              <input class="input-search" type="search" name="buscar" placeholder="Nombre de producto o marca">
-              <button class="icon-search" type="button" name="button"></button>
-
-            </form>
+            <a href="landing.html"><img class="logo-navbar" src="assets/img/logo-superbuscado-white.png" alt=""></a>
           </div>
 
           <!-- menu user -->
 
-          <nav class="navbar col-1 col-sm-1 col-md-1 col-lg-4 navbar-expand-lg navbar-dark pl-0">
+          <nav class="navbar col-8 col-sm-8 col-md-9 col-lg-10 navbar-expand-lg navbar-dark pl-0">
 
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
@@ -103,77 +98,51 @@
       </div>
     </nav>
 
-    <!-- _____________________ Nav sections _____________________ -->
-
-    <nav class="second-navbar py-2">
-      <nav class="container">
-        <div class="row">
-
-          <!-- Ubicación -->
-
-          <nav class="display-flex col-12">
-            <a class="btn-location" href="#">
-              <span class="icon-location green"></span>
-              <p class="location">Capital Federal 1429</p>
-            </a>
-          </nav>
-
-
-        </div>
-      </nav>
-    </nav>
-
   </header>
 
-  <!-- _____________________ new_list _____________________ -->
+  <!-- _____________________ Contact _____________________ -->
 
-  <section class="container container-index">
-    <div class="row">
+  <section class="container" style="padding-top: 6em;">
+    <div class="row d-flex justify-content-center">
 
-      <!-- Titulo categoría -->
-
-      <div class="col-12 d-flex justify-content-start">
-        <a class="icon-plus-circle mr-2" style="font-size: 1.5rem;" href="new_list.html"></a>
-        <a href="new_list.html">
-          <ha class="title-new-list"><b>Nueva lista</b></h4>
-        </a>
-      </div>
-
-      <!-- Lista -->
-
-      <div class="col-12 col-md-6 col-lg-4">
-        <div class="card card-new-list hover-list p-3 mt-4">
+      <div class="col-12 col-md-8 col-lg-5 mt-3">
+        <div class="card card-shadow d-flex align-items-center">
 
           <div class="row">
+            <div class="col-12">
 
-            <div class="col-11">
-              <a href="index.html">
+              <div class="icon-contact-list mt-3"></div>
+
+              <p class="title-login">¿Necesitas que te ayudemos? <br> Escribinos!</p>
+
+              <form class="" action="index.html" method="post">
                 <div class="row">
-                  <div class="col-5 col-sm-4 col-md-5">
-                    <div class="card card-quantity d-flex justify-content-center">
-                      <p class="quantity-list">0</p>
-                      <p class="productos-list-1">Productos</p>
-                    </div>
+
+                  <div class="col-12 d-flex justify-content-center">
+                    <input class="input-login" type="text" name="name" value="" placeholder="Nombre">
                   </div>
 
-                  <div class="col-7 col-sm-8 col-md-7 p-0">
-                    <p class="name-list">Nombre de la lista</p>
-                    <p class="date-list">Última modificación 19/9/2019</p>
+                  <div class="col-12 d-flex justify-content-center">
+                    <input class="input-login" type="email" name="email" value="" placeholder="Email">
+                  </div>
+
+                  <div class="col-12 d-flex justify-content-center">
+                    <textarea class="card message-area" name="name">Dejanos acá tu mensaje ;)</textarea>
+                  </div>
+
+                  <div class="col-12 d-flex justify-content-center mt-2">
+                    <button class="btn-ingresar" type="submit" name="button">Enviar mensaje</button>
                   </div>
 
                 </div>
-              </a>
-            </div>
+              </form>
 
-
-            <div class="col-1 exit-icon">
-              <a class="icon-exit-circle" href="create_list.html"></a>
             </div>
 
           </div>
+
         </div>
       </div>
-
 
     </div>
   </section>
@@ -194,7 +163,7 @@
 
         <div class="col-10 col-md-3 col-lg-4 border-footer">
           <a class="link-footer" href="contact_index.html"><p>Contactanos</p></a>
-          <a class="link-footer" href="#"><p class="mb-0">Preguntas frecuentes</p></a>
+          <a class="link-footer" href="faq.html"><p class="mb-0">Preguntas frecuentes</p></a>
         </div>
 
         <div class="col-8 col-md-3 d-flex justify-content-around align-items-center">
@@ -209,23 +178,38 @@
 
 
 
+  <!-- jQuery CDN - Slim version (=without AJAX) -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 
+  <!-- Popper.JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
 
+  <!-- Bootstrap JS -->
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
 
+  <!-- jQuery Custom Scroller CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script>
 
+  <!-- Sidebar JS -->
+  <script type="text/javascript">
+      $(document).ready(function () {
+          $("#sidebar").mCustomScrollbar({
+              theme: "minimal"
+          });
 
-    <!-- jQuery CDN - Slim version (=without AJAX) -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+          $('#dismiss, .overlay').on('click', function () {
+              $('#sidebar').removeClass('active');
+              $('.overlay').removeClass('active');
+          });
 
-    <!-- Popper.JS -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
-
-    <!-- Bootstrap JS -->
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
-
-    <!-- jQuery Custom Scroller CDN -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script>
-
+          $('#sidebarCollapse').on('click', function () {
+              $('#sidebar').addClass('active');
+              $('.overlay').addClass('active');
+              $('.collapse.in').toggleClass('in');
+              $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+          });
+      });
+  </script>
 
 </body>
 

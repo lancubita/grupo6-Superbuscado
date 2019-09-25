@@ -1,3 +1,10 @@
+<?php
+
+session_start();
+
+ ?>
+
+
 <!DOCTYPE html>
 <html>
 
@@ -7,7 +14,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Inicia sesión</title>
+    <title>Contacto</title>
 
     <!-- Bootstrap CSS CDN -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
@@ -43,7 +50,7 @@
     </div>
   </section>
 
-  <!-- _____________________ Login _____________________ -->
+  <!-- _____________________ Contact _____________________ -->
 
   <section class="container">
     <div class="row d-flex justify-content-center">
@@ -54,47 +61,9 @@
           <div class="row">
             <div class="col-12">
 
-              <p class="title-login">Ingresá a tu cuenta</p>
+              <div class="icon-contact-list mt-3"></div>
 
-              <form class="" action="index.html" method="post">
-                <div class="row">
-
-                  <div class="col-12 d-flex justify-content-center">
-                    <input class="input-login" type="email" name="email" value="" placeholder="Email">
-                  </div>
-
-                  <div class="col-12 d-flex justify-content-center">
-                    <input class="input-login" type="password" name="password" value="" placeholder="Contraseña">
-                  </div>
-
-                  <div class="col-12 remember">
-                    <input class="" type="checkbox" name="remember" id="remember1" value="remember">
-                    <label for="remember1">Recordar usuario</label>
-                  </div>
-
-                  <div class="col-12 d-flex justify-content-center">
-                    <button class="btn-ingresar" type="submit" name="button">Ingresar</button>
-                  </div>
-
-                </div>
-              </form>
-
-            </div>
-
-          </div>
-
-        </div>
-      </div>
-
-      <!-- _____________________ Register _____________________ -->
-
-      <div class="col-12 col-md-8 col-lg-5 my-3">
-        <div class="card card-shadow d-flex align-items-center">
-
-          <div class="row">
-            <div class="col-12">
-
-              <p class="title-login">Creá tu cuenta</p>
+              <p class="title-login">¿Necesitas que te ayudemos? <br> Escribinos!</p>
 
               <form class="" action="index.html" method="post">
                 <div class="row">
@@ -104,30 +73,19 @@
                   </div>
 
                   <div class="col-12 d-flex justify-content-center">
-                    <input class="input-login" type="text" name="lastname" value="" placeholder="Apellido">
-                  </div>
-
-                  <div class="col-12 d-flex justify-content-center">
                     <input class="input-login" type="email" name="email" value="" placeholder="Email">
                   </div>
 
                   <div class="col-12 d-flex justify-content-center">
-                    <input class="input-login" type="password" name="password" value="" placeholder="Contraseña">
+                    <textarea class="card message-area" name="name">Dejanos acá tu mensaje ;)</textarea>
                   </div>
 
-                  <div class="col-12 remember">
-                    <input class="" type="checkbox" name="remember" id="remember2" value="remember">
-                    <label for="remember2">Recordar usuario</label>
-                  </div>
-
-                  <div class="col-12 d-flex justify-content-center">
-                    <button class="btn-ingresar" type="submit" name="button">Registrate</button>
+                  <div class="col-12 d-flex justify-content-center mt-2">
+                    <button class="btn-ingresar" type="submit" name="button">Enviar mensaje</button>
                   </div>
 
                 </div>
               </form>
-
-              <p class="terminos-y-condiciones">Al hacer clic en "Registrate", acepta nuestros <a class="redirect-link" href="#">términos de servicio y política de privacidad.</a>  Ocasionalmente le enviaremos correos electrónicos relacionados con la cuenta.</p>
 
             </div>
 
@@ -138,6 +96,35 @@
 
     </div>
   </section>
+
+  <!-- _____________________ Footer _____________________  -->
+
+  <footer class="footer-index">
+    <div class="container">
+      <div class="row display-footer">
+
+        <div class="col-12 col-md-1 display-footer">
+          <span class="icon-superbuscado-iso-circle green iso-footer"></span>
+        </div>
+
+        <div class="col-12 col-md-5 col-lg-4 display-footer">
+          <p class="slogan-footer">Todos los precios de <br> supermercados en un sólo lugar.</p>
+        </div>
+
+        <div class="col-10 col-md-3 col-lg-4 border-footer">
+          <a class="link-footer" href="contact.html"><p>Contactanos</p></a>
+          <a class="link-footer" href="faq.html"><p class="mb-0">Preguntas frecuentes</p></a>
+        </div>
+
+        <div class="col-8 col-md-3 d-flex justify-content-around align-items-center">
+          <a class="icon-social-footer" href="https://www.facebook.com/Superbuscado-109530587096091/"><span class="icon-facebook-circle green icon-social-footer"></span></a>
+          <a class="icon-social-footer" href="https://www.instagram.com/superbuscado/"><span class="icon-instagram-circle green icon-social-footer"></span></a>
+          <a class="icon-social-footer" href="https://twitter.com/super_buscado"><span class="icon-twitter-circle green icon-social-footer"></span></a>
+        </div>
+
+      </div>
+    </div>
+  </footer>
 
 
 
