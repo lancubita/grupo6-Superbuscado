@@ -135,7 +135,7 @@ session_start();
                   <a class="nav-link btn-account" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     <div class="button-account">
                       <p class="my-account">Mi cuenta</p>
-                      <p class="user-account"><?=$_SESSION['user']['email']?></p>
+                      <p class="user-account"><?=$_SESSION['user']['email']  ?? ''?></p>
                     </div>
                     <span class="icon-arrow-down white"></span>
                   </a>
