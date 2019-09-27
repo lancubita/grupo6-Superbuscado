@@ -1,7 +1,5 @@
 <?php
 
-session_start();
-
 require_once('controladores/funciones.php');
 
 if($_POST){
@@ -16,6 +14,9 @@ if($_POST){
 
     // Almacenar datos de usuario
     guardarUsuario($_POST);
+    $usuario = verificarUsuario($_POST);
+    session_start();
+    $_SESSION['user'] = $usuario;
 
     // Redireccionar
     header('location: create_list.php');
@@ -80,28 +81,28 @@ if($_POST){
                 <div class="row">
 
                   <div class="col-12 mb-0">
-                    <input class="input-login mb-2" type="text" name="name" value="<?php $_POST['name'] ?? '' ?>" placeholder="Nombre">
+                    <input class="input-login mb-2" type="text" name="name" value="<?= $_POST['name'] ?? '' ?>" placeholder="Nombre">
                   </div>
                   <div class="col-12 mb-2" style="color: #e03232; background-color: color: #f8d7da;">
                     <?=$errors['name'] ?? '' ?>
                   </div>
 
                   <div class="col-12 mb-0">
-                    <input class="input-login mb-2" type="text" name="lastname" value="<?php $_POST['lastname'] ?? '' ?>" placeholder="Apellido">
+                    <input class="input-login mb-2" type="text" name="lastname" value="<?= $_POST['lastname'] ?? '' ?>" placeholder="Apellido">
                   </div>
                   <div class="col-12 mb-2" style="color: #e03232; background-color: color: #f8d7da;">
                     <?=$errors['lastname'] ?? '' ?>
                   </div>
 
                   <div class="col-12 mb-0">
-                    <input class="input-login mb-2" type="email" name="email" value="<?php $_POST['email'] ?? '' ?>" placeholder="Email">
+                    <input class="input-login mb-2" type="email" name="email" value="<?= $_POST['email'] ?? '' ?>" placeholder="Email">
                   </div>
                   <div class="col-12 mb-2" style="color: #e03232; background-color: color: #f8d7da;">
                     <?=$errors['email'] ?? '' ?>
                   </div>
 
                   <div class="col-12 mb-0">
-                    <input class="input-login mb-2" type="password" name="password" value="<?php $_POST['password'] ?? '' ?>" placeholder="Contraseña">
+                    <input class="input-login mb-2" type="password" name="password" value="<?= $_POST['password'] ?? '' ?>" placeholder="Contraseña">
                   </div>
                   <div class="col-12 mb-2" style="color: #e03232; background-color: color: #f8d7da;">
                     <?=$error_clave['password'] ?? '' ?>
