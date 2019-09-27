@@ -1,10 +1,5 @@
 {
     "usuarios": [
-        {
-            "name": "sofia",
-            "lastname": "lancuba",
-            "email": "sofia.lancuba@gmail.com",
-            "password": "$2y$10$y6PZygdMSobm\/9YKGph2v.iFJtkQ8xN92d5E2JsqIEOs2bUPC1wPO"
-        }
+      
     ]
 }

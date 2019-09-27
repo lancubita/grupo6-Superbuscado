@@ -108,14 +108,14 @@ if($_POST){
                 <div class="row">
 
                   <div class="col-12 d-flex justify-content-center">
-                    <input class="input-login" type="email" name="email" value="<?php $_POST['email'] ?? '' ?> " placeholder="Email">
+                    <input class="input-login" type="email" name="email" value="<?= $_POST['email'] ?? '' ?> " placeholder="Email">
                   </div>
                   <div class="col-12 mb-2" style="color: #e03232; background-color: color: #f8d7da;">
                     <?=$error['email'] ?? '' ?>
                   </div>
 
                   <div class="col-12 d-flex justify-content-center">
-                    <input class="input-login" type="password" name="password" value="<?php $_POST['password'] ?? '' ?>" placeholder="Contraseña">
+                    <input class="input-login" type="password" name="password" value="<?= $_POST['password'] ?? '' ?>" placeholder="Contraseña">
                   </div>
                   <div class="col-12 mb-2" style="color: #e03232; background-color: color: #f8d7da;">
                     <?=$error['password'] ?? '' ?>

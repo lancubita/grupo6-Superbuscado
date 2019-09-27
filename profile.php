@@ -116,7 +116,7 @@ session_start();
           <div class="col-12 col-md-6 col-lg-4">
             <div class="row d-flex justify-content-center">
 
-              <div class="avatar" style="background-image: url(assets/img/img_profile.jpg)"></div>
+              <div class="avatar" style="background-image: url(files/img_profile.jpg)"></div>
 
               <div class="col-12">
                 <div class="card card-profile pb-4">
@@ -126,8 +126,8 @@ session_start();
                       <h6 class="email-profile green brd-bottom-green"><?=$_SESSION['user']['email']?></h6>
                       <p class="personal-info mt-3 brd-bottom-grey"><b>Nombre: </b><?=$_SESSION['user']['name']?></p>
                       <p class="personal-info brd-bottom-grey"><b>Apellido: </b> <?=$_SESSION['user']['lastname']?></p>
-                      <p class="personal-info brd-bottom-grey"><b>DNI: </b><?=$_SESSION['user']['dni']?></p>
-                      <p class="personal-info"><b>Teléfono: </b> <?=$_SESSION['user']['tel']?></p>
+                      <p class="personal-info brd-bottom-grey"><b>DNI: </b><?=$_SESSION['user']['dni'] ?? ''?></p>
+                      <p class="personal-info"><b>Teléfono: </b> <?=$_SESSION['user']['tel'] ?? ''?></p>
                     </div>
 
                     <div class="col-12">

@@ -143,7 +143,7 @@ if($_FILES) {
 
           <div class="col-12">
             <div class="d-flex justify-content-center">
-              <label class="avatar" for="img-profile" style="background-image: url(assets/img/img_profile.jpg)"><p class="editar-avatar">Editar</p></label>
+              <label class="avatar" for="img-profile" style="background-image: url(files/img_profile.jpg)"><p class="editar-avatar">Editar</p></label>
               <input class="avatar" type="file" name="imagen" value="" id="img-profile" onchange='cambiar()'>
             </div>
           </div>
@@ -167,7 +167,7 @@ if($_FILES) {
                   <label for="">Email:</label>
                 </div>
                 <div class="col-8 col-lg-9 col-xl-9 d-flex justify-content-start">
-                  <input type="email" name="email" value="">
+                  <input type="email" name="email" value="<?=$_SESSION['user']['email'] ?? ''?>">
                 </div>
               </div>
 
@@ -178,7 +178,7 @@ if($_FILES) {
                   <label for="">Nombre:</label>
                 </div>
                 <div class="col-8 col-lg-9 col-xl-9 d-flex justify-content-start">
-                  <input type="text" name="nombre" value="">
+                  <input type="text" name="nombre" value="<?=$_SESSION['user']['name'] ?? ''?>">
                 </div>
               </div>
 
@@ -189,7 +189,7 @@ if($_FILES) {
                   <label for="">Apellido:</label>
                 </div>
                 <div class="col-8 col-lg-9 col-xl-9 d-flex justify-content-start">
-                  <input type="text" name="apellido" value="">
+                  <input type="text" name="apellido" value="<?=$_SESSION['user']['lastname'] ?? ''?>">
                 </div>
               </div>
 
@@ -200,7 +200,7 @@ if($_FILES) {
                   <label for="">DNI:</label>
                 </div>
                 <div class="col-8 col-lg-9 col-xl-9 d-flex justify-content-start">
-                  <input type="number" name="dni" value="">
+                  <input type="number" name="dni" value="<?=$_SESSION['user']['dni'] ?? ''?>">
                 </div>
               </div>
 
@@ -211,7 +211,7 @@ if($_FILES) {
                   <label for="">Teléfono:</label>
                 </div>
                 <div class="col-8 col-lg-9 col-xl-9 d-flex justify-content-start">
-                  <input type="tel" name="tel" value="">
+                  <input type="tel" name="tel" value="<?=$_SESSION['user']['tel'] ?? ''?>">
                 </div>
               </div>
 
