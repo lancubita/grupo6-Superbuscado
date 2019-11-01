@@ -1,5 +1,10 @@
 {
     "usuarios": [
-      
+        {
+            "name": "Santiago",
+            "lastname": "Ibarzabal",
+            "email": "hola@hola.com",
+            "password": "$2y$10$xFIrHoG4i5GTwLYTiv24xeFtHeMT9PeEil1XcMsmJbZk3cE9RAD8y"
+        }
     ]
 }
