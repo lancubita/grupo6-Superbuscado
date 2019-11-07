@@ -4,6 +4,7 @@ session_start();
 
 session_destroy();
 
+setcookie("user_logged", "user_logged", -1);
 ?>
 
 <!DOCTYPE html>

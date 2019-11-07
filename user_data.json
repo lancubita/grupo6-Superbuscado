@@ -1,10 +1,10 @@
 {
     "usuarios": [
         {
-            "name": "Santiago",
+            "name": "Santi",
             "lastname": "Ibarzabal",
-            "email": "hola@hola.com",
-            "password": "$2y$10$xFIrHoG4i5GTwLYTiv24xeFtHeMT9PeEil1XcMsmJbZk3cE9RAD8y"
+            "email": "santiagoibarzabal91@gmail.com",
+            "password": "$2y$10$j0VwpqbMN6P9w\/Co51tXPu.8NKt3gJqKKGU1.PgYSArYQ1tBxDHOS"
         }
     ]
 }
