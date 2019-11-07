@@ -1,5 +1,10 @@
 {
     "usuarios": [
-      
+        {
+            "name": "Santi",
+            "lastname": "Ibarzabal",
+            "email": "santiagoibarzabal91@gmail.com",
+            "password": "$2y$10$j0VwpqbMN6P9w\/Co51tXPu.8NKt3gJqKKGU1.PgYSArYQ1tBxDHOS"
+        }
     ]
 }

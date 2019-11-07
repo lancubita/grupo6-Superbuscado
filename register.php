@@ -2,6 +2,10 @@
 
 require_once('controladores/funciones.php');
 
+setcookie("user_logged", "user_logged", time() + (60*60*24*10));
+
+
+
 if($_POST){
 
   // Validar datos de usuario

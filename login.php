@@ -2,6 +2,7 @@
 
 session_start();
 
+setcookie("user_logged", "user_logged", time() + (60*60*24*10));
 
 // ------------- Cookie para remember (checkbox) -------------
 
